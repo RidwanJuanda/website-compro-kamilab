@@ -996,6 +996,17 @@ img.service-icon {
     line-height: 1.6;
 }
 
+.contact-email-link {
+    color: #475569;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-email-link:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
 .contact-icon {
     font-size: 20px;
 }
