@@ -70,41 +70,8 @@
 })();
 
 // Mobile Menu Toggle for Portfolio Page
-(function() {
-    'use strict';
-    
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const mainNav = document.getElementById('mainNav');
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    if (mobileMenuToggle && mainNav) {
-        mobileMenuToggle.addEventListener('click', function() {
-            mobileMenuToggle.classList.toggle('active');
-            mainNav.classList.toggle('active');
-            document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
-        });
-        
-        // Close menu when clicking on a link
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenuToggle.classList.remove('active');
-                mainNav.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (mainNav.classList.contains('active') && 
-                !mainNav.contains(e.target) && 
-                !mobileMenuToggle.contains(e.target)) {
-                mobileMenuToggle.classList.remove('active');
-                mainNav.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-    }
-})();
+// Note: Mobile menu toggle is handled by script.js, so we skip it here to avoid double event listeners
+// This function is kept for portfolio-specific menu handling if needed in the future
 
 // Portfolio Image Modal Popup with Zoom
 (function() {

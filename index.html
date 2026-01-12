@@ -19,7 +19,7 @@
                         <h2 class="logo-text">Kamilab</h2>
                     </div> -->
                 </a>
-                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu" onclick="toggleMobileMenu(event)">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -387,6 +387,24 @@
         </div>
     </div>
 
+    <script>
+        // Global function as fallback for mobile menu toggle
+        // This will be overridden by script.js event listeners, but kept as fallback
+        window.toggleMobileMenu = function(e) {
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mainNav = document.getElementById('mainNav');
+            if (mobileMenuToggle && mainNav) {
+                const isActive = mobileMenuToggle.classList.contains('active');
+                mobileMenuToggle.classList.toggle('active');
+                mainNav.classList.toggle('active');
+                document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+            }
+        };
+    </script>
     <script src="script.js"></script>
     <script src="portfolio-script.js"></script>
 </body>

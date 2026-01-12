@@ -92,21 +92,73 @@
 (function() {
     'use strict';
     
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const mainNav = document.getElementById('mainNav');
-    const navLinks = document.querySelectorAll('.nav-link');
+    // Prevent multiple initializations
+    if (window.mobileMenuInitialized) {
+        return;
+    }
+    window.mobileMenuInitialized = true;
     
-    if (mobileMenuToggle && mainNav) {
-        mobileMenuToggle.addEventListener('click', function() {
-            mobileMenuToggle.classList.toggle('active');
+    function initMobileMenu() {
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mainNav = document.getElementById('mainNav');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        if (!mobileMenuToggle || !mainNav) {
+            // Retry after a short delay if elements not found
+            setTimeout(initMobileMenu, 100);
+            return;
+        }
+        
+        // Remove any existing event listeners by cloning
+        const newToggle = mobileMenuToggle.cloneNode(true);
+        mobileMenuToggle.parentNode.replaceChild(newToggle, mobileMenuToggle);
+        const toggle = document.getElementById('mobileMenuToggle');
+        
+        // Function to toggle menu
+        let isToggling = false;
+        function toggleMenu(e) {
+            if (isToggling) return;
+            isToggling = true;
+            
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            const isActive = toggle.classList.contains('active');
+            toggle.classList.toggle('active');
             mainNav.classList.toggle('active');
             document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
-        });
+            console.log('Menu toggled:', !isActive ? 'opened' : 'closed');
+            setTimeout(() => { isToggling = false; }, 100);
+        }
+        
+        // Use single touch event to avoid double triggering
+        let touchStartTime = 0;
+        toggle.addEventListener('touchstart', function(e) {
+            touchStartTime = Date.now();
+            e.stopPropagation();
+        }, { passive: true });
+        
+        toggle.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            // Only trigger if touch was quick (not a scroll)
+            if (Date.now() - touchStartTime < 300) {
+                toggleMenu(e);
+            }
+        }, { passive: false });
+        
+        // Click event for desktop/mouse
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleMenu(e);
+        }, { passive: false });
         
         // Close menu when clicking on a link
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
-                mobileMenuToggle.classList.remove('active');
+                toggle.classList.remove('active');
                 mainNav.classList.remove('active');
                 document.body.style.overflow = '';
             });
@@ -116,12 +168,19 @@
         document.addEventListener('click', function(e) {
             if (mainNav.classList.contains('active') && 
                 !mainNav.contains(e.target) && 
-                !mobileMenuToggle.contains(e.target)) {
-                mobileMenuToggle.classList.remove('active');
+                !toggle.contains(e.target)) {
+                toggle.classList.remove('active');
                 mainNav.classList.remove('active');
                 document.body.style.overflow = '';
             }
         });
+    }
+    
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMobileMenu);
+    } else {
+        initMobileMenu();
     }
 })();
 
