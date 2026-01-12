@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - KAMILAB</title>
+    <link rel="icon" type="image/png" href="images/ic-logo-dark-blue.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <img src="images/ic-logo-dark-blue.png" alt="KAMILAB Icon" class="logo-icon-left">
+                    <img src="images/ic-logo-text-dark-blue.png" alt="KAMILAB Logo" class="logo-icon">
+                    <!-- <div class="logo-text-container">
+                        <h2 class="logo-text">Kamilab</h2>
+                    </div> -->
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav" id="mainNav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#layanan" class="nav-link">Our Services</a>
+                    <a href="portfolio.html" class="nav-link active">Portofolio</a>
+                    <a href="index.html#kontak" class="nav-link">Contact Us</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Hero Section -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <div class="portfolio-hero-content">
+                <div class="portfolio-hero-text">
+                    <span class="portfolio-tag">Portfolio</span>
+                    <h1 class="portfolio-hero-title">Project yang kami bangun untuk membantu bisnis berkembang</h1>
+                    <p class="portfolio-hero-description">
+                        Lihat hasil karya kami yang menunjukan kontribusi kami dalam membantu bisnis untuk berkembang melalui solusi teknologi yang inovatif dan efektif.
+                    </p>
+                    <a href="index.html#kontak" class="btn-portfolio-contact">Hubungi Kami</a>
+                </div>
+                <div class="portfolio-hero-image">
+                    <div class="portfolio-hero-illustration">
+                        <div class="illustration-person-portfolio"></div>
+                        <div class="illustration-laptop-main">
+                            <div class="laptop-screen">
+                                <div class="screen-chart"></div>
+                                <div class="screen-gear-1"></div>
+                                <div class="screen-gear-2"></div>
+                            </div>
+                        </div>
+                        <div class="illustration-laptop-side"></div>
+                        <div class="illustration-monitor-portfolio">
+                            <div class="monitor-screen-portfolio">
+                                <div class="rocket-icon">🚀</div>
+                            </div>
+                        </div>
+                        <div class="illustration-cup"></div>
+                        <div class="illustration-plant"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
+        <div class="container">
+            <h2 class="portfolio-section-title">Portfolio Kami</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="portfolio-filters">
+                <button class="portfolio-filter-btn active" data-filter="all">Semua</button>
+                <button class="portfolio-filter-btn" data-filter="web">Web Design</button>
+                <button class="portfolio-filter-btn" data-filter="mobile">Aplikasi Mobile</button>
+                <button class="portfolio-filter-btn" data-filter="branding">Branding</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-items-grid">
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-item-image portfolio-dashboard-bg">
+                        <div class="portfolio-dashboard-preview">
+                            <div class="dashboard-header"></div>
+                            <div class="dashboard-charts">
+                                <div class="chart-bar"></div>
+                                <div class="chart-bar"></div>
+                                <div class="chart-bar"></div>
+                                <div class="chart-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <h3 class="portfolio-item-title">InvestaPro Financial Dashboard</h3>
+                        <p class="portfolio-item-description">Dashboard keuangan untuk monitoring investasi</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-item-image portfolio-mobile-bg">
+                        <div class="portfolio-mobile-preview">
+                            <div class="mobile-screen-1"></div>
+                            <div class="mobile-screen-2"></div>
+                            <div class="mobile-screen-3"></div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <h3 class="portfolio-item-title">ShopSmart E-Commerce App</h3>
+                        <p class="portfolio-item-description">Aplikasi belanja online yang modern dan user-friendly</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-item-image portfolio-branding-bg">
+                        <div class="portfolio-branding-preview">
+                            <div class="branding-logo">TF</div>
+                            <div class="branding-card"></div>
+                            <div class="branding-doc"></div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <h3 class="portfolio-item-title">TechFlow Brand Identity Design</h3>
+                        <p class="portfolio-item-description">Pengembangan identitas brand yang professional</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-item-image portfolio-productivity-bg">
+                        <div class="portfolio-productivity-preview">
+                            <div class="productivity-screen">
+                                <div class="productivity-calendar"></div>
+                                <div class="productivity-gear"></div>
+                                <div class="productivity-chart"></div>
+                            </div>
+                            <div class="productivity-person"></div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item-content">
+                        <h3 class="portfolio-item-title">How to Boost Your Productivity</h3>
+                        <p class="portfolio-item-description">Konten solutif tentang tips meningkatkan produktivitas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 KAMILAB. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="portfolio-script.js"></script>
+</body>
+</html>

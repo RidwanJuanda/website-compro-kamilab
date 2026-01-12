@@ -1,0 +1,478 @@
+// Hero Slider Functionality
+(function() {
+    'use strict';
+    
+    let currentSlide = 0;
+    let slideInterval = null;
+    let slides = [];
+    let dots = [];
+
+    // Function to initialize slider
+    function initSlider() {
+        slides = document.querySelectorAll('.slide');
+        dots = document.querySelectorAll('.dot');
+        
+        if (slides.length === 0) {
+            console.error('No slides found');
+            return;
+        }
+
+        // Function to show specific slide
+        function showSlide(index) {
+            if (index < 0 || index >= slides.length) return;
+            
+            // Remove active class from all slides and dots
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Add active class to current slide and dot
+            if (slides[index]) {
+                slides[index].classList.add('active');
+            }
+            if (dots[index]) {
+                dots[index].classList.add('active');
+            }
+            
+            currentSlide = index;
+        }
+
+        // Function to go to next slide
+        function nextSlide() {
+            const next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+        }
+
+        // Function to start auto-play
+        function startSlider() {
+            // Clear any existing interval
+            if (slideInterval) {
+                clearInterval(slideInterval);
+            }
+            slideInterval = setInterval(nextSlide, 4000); // Change slide every 2 seconds
+        }
+
+        // Function to stop auto-play
+        function stopSlider() {
+            if (slideInterval) {
+                clearInterval(slideInterval);
+                slideInterval = null;
+            }
+        }
+
+        // Add click event to dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                showSlide(index);
+                stopSlider();
+                startSlider(); // Restart auto-play after manual navigation
+            });
+        });
+
+        // Pause slider on hover
+        const slider = document.querySelector('.hero-slider');
+        if (slider) {
+            slider.addEventListener('mouseenter', stopSlider);
+            slider.addEventListener('mouseleave', startSlider);
+        }
+
+        // Start the slider
+        startSlider();
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSlider);
+    } else {
+        // DOM is already ready
+        initSlider();
+    }
+})();
+
+// Mobile Menu Toggle
+(function() {
+    'use strict';
+    
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mainNav = document.getElementById('mainNav');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    if (mobileMenuToggle && mainNav) {
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuToggle.classList.toggle('active');
+            mainNav.classList.toggle('active');
+            document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Close menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (mainNav.classList.contains('active') && 
+                !mainNav.contains(e.target) && 
+                !mobileMenuToggle.contains(e.target)) {
+                mobileMenuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+})();
+
+// Navigation Active State
+(function() {
+    'use strict';
+    
+    // Skip navigation active state logic if on portfolio page
+    if (window.location.pathname.includes('portfolio.html')) {
+        return;
+    }
+    
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Function to update active state based on current section
+    function updateActiveNav() {
+        const sections = document.querySelectorAll('section[id]');
+        const scrollPos = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const headerOffset = 150; // Offset untuk header sticky dan padding
+        
+        // Remove active from all links first
+        navLinks.forEach(link => link.classList.remove('active'));
+        
+        // If at top of page, set Home as active
+        if (scrollPos < 100) {
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === 'index.html' || href === '#' || href === '/' || href.includes('index.html')) {
+                    link.classList.add('active');
+                }
+            });
+            return;
+        }
+        
+        // First, check if footer/kontak section is visible in viewport
+        const footerSection = document.getElementById('kontak');
+        if (footerSection) {
+            const footerRect = footerSection.getBoundingClientRect();
+            // If footer is visible in viewport (even partially), activate Contact Us
+            if (footerRect.top < windowHeight && footerRect.bottom > 0) {
+                // Check if footer is significantly visible (more than 20% of viewport)
+                const footerVisibleHeight = Math.min(footerRect.bottom, windowHeight) - Math.max(footerRect.top, 0);
+                const viewportRatio = footerVisibleHeight / windowHeight;
+                
+                if (viewportRatio > 0.2 || footerRect.top < windowHeight * 0.5) {
+                    navLinks.forEach(link => {
+                        const href = link.getAttribute('href');
+                        if (href === '#kontak') {
+                            link.classList.add('active');
+                            return;
+                        }
+                    });
+                    return;
+                }
+            }
+        }
+        
+        // Find current section based on scroll position
+        let currentSection = null;
+        let maxVisibleRatio = 0;
+        
+        // Check each section to see which one is most visible
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const sectionId = section.getAttribute('id');
+            
+            // Skip footer section in this check (already handled above)
+            if (sectionId === 'kontak') {
+                return;
+            }
+            
+            // Calculate visible area of section
+            const visibleTop = Math.max(rect.top, 0);
+            const visibleBottom = Math.min(rect.bottom, windowHeight);
+            const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+            const sectionHeight = rect.height;
+            
+            // Calculate ratio of visible area
+            const visibleRatio = sectionHeight > 0 ? visibleHeight / sectionHeight : 0;
+            
+            // Check if section is significantly visible in viewport
+            if (rect.top < windowHeight - headerOffset && rect.bottom > headerOffset && visibleRatio > 0.3) {
+                if (visibleRatio > maxVisibleRatio) {
+                    maxVisibleRatio = visibleRatio;
+                    currentSection = sectionId;
+                }
+            }
+        });
+        
+        // Update nav links based on current section
+        if (currentSection) {
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        } else {
+            // If no section found, find nearest section based on scroll position
+            let nearestSection = null;
+            let minDistance = Infinity;
+            
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                const sectionTop = rect.top + scrollPos;
+                const sectionId = section.getAttribute('id');
+                
+                // Skip footer in nearest calculation (already handled)
+                if (sectionId === 'kontak') {
+                    return;
+                }
+                
+                // Calculate distance from scroll position to section top
+                const distance = Math.abs(scrollPos - (sectionTop - headerOffset));
+                
+                // Prefer sections that are above or at current scroll position
+                if (sectionTop <= scrollPos + headerOffset + 100) {
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        nearestSection = sectionId;
+                    }
+                }
+            });
+            
+            if (nearestSection) {
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === `#${nearestSection}`) {
+                        link.classList.add('active');
+                    }
+                });
+            } else {
+                // Fallback to Home if nothing found
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === 'index.html' || href === '#' || href === '/' || href.includes('index.html')) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        }
+    }
+    
+    // Update active state on click
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Handle anchor links with smooth scroll
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    // Update URL hash
+                    history.pushState(null, null, href);
+                    
+                    // Smooth scroll to target
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Update active state after scroll completes (let scroll detection handle it)
+                    setTimeout(updateActiveNav, 800);
+                }
+            } else if (href === 'index.html' || href.includes('index.html')) {
+                // Scroll to top for home link
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                history.pushState(null, null, window.location.pathname);
+                setTimeout(updateActiveNav, 800);
+            }
+        });
+    });
+    
+    // Update active state on scroll (throttled for performance)
+    let scrollTimeout;
+    let isScrolling = false;
+    
+    window.addEventListener('scroll', function() {
+        if (!isScrolling) {
+            window.requestAnimationFrame(function() {
+                updateActiveNav();
+                isScrolling = false;
+            });
+            isScrolling = true;
+        }
+        
+        // Also use timeout as backup
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function() {
+            updateActiveNav();
+        }, 150);
+    }, { passive: true });
+    
+    // Update active state on hash change
+    window.addEventListener('hashchange', function() {
+        setTimeout(updateActiveNav, 100);
+    });
+    
+    // Update active state on page load
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(updateActiveNav, 100);
+        });
+    } else {
+        setTimeout(updateActiveNav, 100);
+    }
+})();
+
+// Hero Banner Image Slider
+(function() {
+    'use strict';
+    
+    let currentImageIndex = 0;
+    let bannerInterval = null;
+    const bannerImages = document.querySelectorAll('.hero-banner-image');
+    
+    // Function to show specific image
+    function showBannerImage(index) {
+        if (bannerImages.length === 0) return;
+        
+        // Remove active class from all images
+        bannerImages.forEach(img => img.classList.remove('active'));
+        
+        // Add active class to current image
+        if (bannerImages[index]) {
+            bannerImages[index].classList.add('active');
+        }
+        
+        currentImageIndex = index;
+    }
+    
+    // Function to go to next image
+    function nextBannerImage() {
+        const next = (currentImageIndex + 1) % bannerImages.length;
+        showBannerImage(next);
+    }
+    
+    // Function to start auto-play
+    function startBannerSlider() {
+        // Clear any existing interval
+        if (bannerInterval) {
+            clearInterval(bannerInterval);
+        }
+        // Change image every 5 seconds (5000ms)
+        bannerInterval = setInterval(nextBannerImage, 3000);
+    }
+    
+    // Function to stop auto-play
+    function stopBannerSlider() {
+        if (bannerInterval) {
+            clearInterval(bannerInterval);
+            bannerInterval = null;
+        }
+    }
+    
+    // Initialize banner slider
+    function initBannerSlider() {
+        if (bannerImages.length === 0) {
+            console.log('No banner images found');
+            return;
+        }
+        
+        // Show first image
+        showBannerImage(0);
+        
+        // Start auto-play
+        startBannerSlider();
+        
+        // Pause slider on hover
+        const heroImage = document.querySelector('.hero-image');
+        if (heroImage) {
+            heroImage.addEventListener('mouseenter', stopBannerSlider);
+            heroImage.addEventListener('mouseleave', startBannerSlider);
+        }
+    }
+    
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initBannerSlider);
+    } else {
+        initBannerSlider();
+    }
+})();
+
+// Contact Form WhatsApp Redirect
+(function() {
+    'use strict';
+    
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('contactName').value.trim();
+            const email = document.getElementById('contactEmail').value.trim();
+            const message = document.getElementById('contactMessage').value.trim();
+            
+            // Validate all fields
+            if (!name) {
+                alert('Please fill in the Name field');
+                document.getElementById('contactName').focus();
+                return;
+            }
+            
+            if (!email) {
+                alert('Please fill in the Email field');
+                document.getElementById('contactEmail').focus();
+                return;
+            }
+            
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please fill in the Email field with the correct format');
+                document.getElementById('contactEmail').focus();
+                return;
+            }
+            
+            if (!message) {
+                alert('Please fill in the Message field');
+                document.getElementById('contactMessage').focus();
+                return;
+            }
+            
+            // Format message for WhatsApp
+            const whatsappMessage = `Halo KamiLab Team, saya ${name}.\n\nEmail: ${email}\n\nPesan:\n${message}`;
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // WhatsApp number
+            const phoneNumber = '+6281212057130';
+            
+            // Create WhatsApp URL
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            
+            // Open WhatsApp in new tab
+            window.open(whatsappURL, '_blank');
+            
+            // Optional: Reset form after redirect
+            // contactForm.reset();
+        });
+    }
+})();
