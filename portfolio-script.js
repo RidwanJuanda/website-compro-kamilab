@@ -105,3 +105,86 @@
         });
     }
 })();
+
+// Portfolio Image Modal Popup with Zoom
+(function() {
+    'use strict';
+    
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalClose = document.getElementById('modalClose');
+    const modalOverlay = document.querySelector('.modal-overlay');
+    const portfolioImages = document.querySelectorAll('.portfolio-image-clickable');
+    
+    if (!modal || !modalImage || !modalDescription || !modalClose) {
+        return;
+    }
+    
+    // Function to open modal
+    function openModal(imageSrc, description) {
+        modalImage.src = imageSrc;
+        modalImage.classList.remove('zoomed'); // Reset zoom state
+        modalDescription.textContent = description || '';
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+    
+    // Function to close modal
+    function closeModal() {
+        modal.classList.remove('active');
+        modalImage.classList.remove('zoomed'); // Reset zoom state
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+    
+    // Add click event listeners to portfolio images
+    portfolioImages.forEach(image => {
+        image.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const imageSrc = this.src;
+            const description = this.getAttribute('data-description') || '';
+            openModal(imageSrc, description);
+        });
+    });
+    
+    // Close modal when clicking close button
+    modalClose.addEventListener('click', function(e) {
+        e.stopPropagation();
+        closeModal();
+    });
+    
+    // Close modal when clicking overlay
+    modalOverlay.addEventListener('click', function(e) {
+        e.stopPropagation();
+        closeModal();
+    });
+    
+    // Close modal when pressing Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+    
+    // Zoom functionality on image click
+    modalImage.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('zoomed');
+    });
+    
+    // Prevent modal from closing when clicking on image container
+    const modalImageContainer = document.querySelector('.modal-image-container');
+    if (modalImageContainer) {
+        modalImageContainer.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+    
+    // Prevent modal from closing when clicking on description
+    const modalDescElement = document.querySelector('.modal-description');
+    if (modalDescElement) {
+        modalDescElement.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+})();
