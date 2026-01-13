@@ -1304,6 +1304,7 @@ img.service-icon {
     display: flex;
     justify-content: center;
     align-items: center;
+    order: 2;
 }
 
 .portfolio-hero-illustration {
@@ -1774,43 +1775,56 @@ img.mobile-screen-1::before {
 
 @media (max-width: 768px) {
     .portfolio-hero {
-        padding: 60px 0 40px;
+        padding: 60px 0 40px !important;
+    }
+    
+    .portfolio-hero .container {
+        padding: 0 20px !important;
     }
     
     .portfolio-hero-content {
-        gap: 30px;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
     }
     
     .portfolio-hero-text {
-        gap: 15px;
+        gap: 15px !important;
+        order: 2;
+        width: 100%;
     }
     
     .portfolio-hero-title {
-        font-size: 28px;
-        line-height: 1.3;
+        font-size: 28px !important;
+        line-height: 1.3 !important;
     }
     
     .portfolio-hero-description {
-        font-size: 16px;
-        line-height: 1.6;
+        font-size: 16px !important;
+        line-height: 1.6 !important;
     }
     
     .portfolio-tag {
-        font-size: 12px;
-        padding: 6px 12px;
+        font-size: 12px !important;
+        padding: 6px 12px !important;
     }
     
     .btn-portfolio-contact {
-        padding: 14px 28px;
-        font-size: 14px;
+        padding: 14px 28px !important;
+        font-size: 14px !important;
     }
     
     .portfolio-hero-image {
-        order: -1;
+        order: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 20px;
     }
     
     .portfolio-hero-illustration {
-        height: 300px;
+        height: 300px !important;
+        max-width: 100% !important;
+        overflow: hidden;
     }
     
     .illustration-person-portfolio {

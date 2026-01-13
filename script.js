@@ -12,8 +12,8 @@
         slides = document.querySelectorAll('.slide');
         dots = document.querySelectorAll('.dot');
         
+        // Silently return if slides don't exist (e.g., on portfolio page)
         if (slides.length === 0) {
-            console.error('No slides found');
             return;
         }
 
@@ -446,8 +446,8 @@
     
     // Initialize banner slider
     function initBannerSlider() {
+        // Silently return if banner images don't exist (e.g., on portfolio page)
         if (bannerImages.length === 0) {
-            console.log('No banner images found');
             return;
         }
         
