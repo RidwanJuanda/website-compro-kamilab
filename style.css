@@ -25,7 +25,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .header-content {
@@ -334,7 +334,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .icon-gear {
@@ -473,7 +473,7 @@ body {
     border-radius: 12px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .service-card:hover {
@@ -500,7 +500,7 @@ img.service-icon {
 
 .service-title {
     font-size: 20px;
-    color: #333333;
+    color: #2563eb;
     margin-bottom: 10px;
     font-weight: 600;
 }
@@ -527,7 +527,7 @@ img.service-icon {
     background: #ffffff;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
@@ -714,7 +714,7 @@ img.service-icon {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
+    background-image:
         radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.05) 0%, transparent 50%);
     pointer-events: none;
@@ -840,12 +840,12 @@ img.service-icon {
     .team-section {
         padding: 60px 0;
     }
-    
+
     .team-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .team-image-wrapper {
         width: 120px;
         height: 120px;
@@ -900,7 +900,7 @@ img.service-icon {
     left: 0;
     right: 0;
     height: 60%;
-    background-image: 
+    background-image:
         radial-gradient(ellipse 200% 100% at 50% 100%, rgba(56, 189, 248, 0.3) 0%, transparent 50%),
         radial-gradient(ellipse 150% 80% at 30% 80%, rgba(147, 197, 253, 0.2) 0%, transparent 50%),
         radial-gradient(ellipse 120% 60% at 70% 90%, rgba(191, 219, 254, 0.25) 0%, transparent 50%);
@@ -908,7 +908,7 @@ img.service-icon {
     z-index: 0;
 }
 
-.footer-about > * {
+.footer-about>* {
     position: relative;
     z-index: 1;
 }
@@ -970,7 +970,7 @@ img.service-icon {
     width: 100%;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .footer-map iframe {
@@ -1113,15 +1113,15 @@ img.service-icon {
     .hero-content {
         grid-template-columns: 1fr;
     }
-    
+
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
     }
@@ -1131,32 +1131,32 @@ img.service-icon {
     .hero-title {
         font-size: 32px;
     }
-    
+
     .services-overview-grid {
         flex-direction: column;
         gap: 30px;
     }
-    
+
     .service-overview-separator {
         display: none;
     }
-    
+
     .service-overview-card {
         padding: 20px;
     }
-    
+
     .services-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .header-content {
         position: relative;
     }
-    
+
     .mobile-menu-toggle {
         display: flex !important;
         position: relative !important;
@@ -1172,11 +1172,11 @@ img.service-icon {
         -moz-user-select: none !important;
         user-select: none !important;
     }
-    
+
     .mobile-menu-toggle:active {
         opacity: 0.7;
     }
-    
+
     .nav {
         position: fixed;
         top: 0;
@@ -1196,13 +1196,13 @@ img.service-icon {
         pointer-events: none;
         visibility: hidden;
     }
-    
+
     .nav.active {
         right: 0;
         pointer-events: auto;
         visibility: visible;
     }
-    
+
     .nav-link {
         width: 100%;
         padding: 15px 0;
@@ -1245,7 +1245,7 @@ img.service-icon {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
+    background-image:
         radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 70%, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
     pointer-events: none;
@@ -1770,15 +1770,15 @@ img.mobile-screen-1::before {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .portfolio-hero-image {
         order: -1;
     }
-    
+
     .portfolio-items-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .btn-konsultasi {
         display: none;
     }
@@ -1788,131 +1788,131 @@ img.mobile-screen-1::before {
     .portfolio-hero {
         padding: 60px 0 40px !important;
     }
-    
+
     .portfolio-hero .container {
         padding: 0 20px !important;
     }
-    
+
     .portfolio-hero-content {
         display: flex !important;
         flex-direction: column !important;
         gap: 30px !important;
     }
-    
+
     .portfolio-hero-text {
         gap: 15px !important;
         order: 2;
         width: 100%;
     }
-    
+
     .portfolio-hero-title {
         font-size: 28px !important;
         line-height: 1.3 !important;
     }
-    
+
     .portfolio-hero-description {
         font-size: 16px !important;
         line-height: 1.6 !important;
     }
-    
+
     .portfolio-tag {
         font-size: 12px !important;
         padding: 6px 12px !important;
     }
-    
+
     .btn-portfolio-contact {
         padding: 14px 28px !important;
         font-size: 14px !important;
     }
-    
+
     .portfolio-hero-image {
         order: 1 !important;
         width: 100% !important;
         max-width: 100% !important;
         margin-bottom: 20px;
     }
-    
+
     .portfolio-hero-illustration {
         height: 300px !important;
         max-width: 100% !important;
         overflow: hidden;
     }
-    
+
     .illustration-person-portfolio {
         width: 80px;
         height: 140px;
     }
-    
+
     .illustration-laptop-main {
         bottom: 120px;
         width: 140px;
         height: 100px;
     }
-    
+
     .illustration-laptop-side {
         bottom: 140px;
         left: 20%;
         width: 60px;
         height: 40px;
     }
-    
+
     .illustration-monitor-portfolio {
         bottom: 200px;
         right: 10%;
         width: 100px;
         height: 80px;
     }
-    
+
     .monitor-screen-portfolio {
         width: 80px;
         height: 60px;
     }
-    
+
     .rocket-icon {
         font-size: 24px;
     }
-    
+
     .screen-gear-1,
     .screen-gear-2 {
         width: 20px;
         height: 20px;
     }
-    
+
     .screen-gear-1 {
         top: 15px;
         left: 20px;
     }
-    
+
     .screen-gear-2 {
         top: 15px;
         right: 20px;
     }
-    
+
     .screen-chart {
         bottom: 15px;
         left: 15px;
         right: 15px;
         height: 30px;
     }
-    
+
     .illustration-cup {
         bottom: 60px;
         right: 15%;
         width: 25px;
         height: 35px;
     }
-    
+
     .illustration-plant {
         bottom: 50px;
         left: 10%;
         width: 30px;
         height: 50px;
     }
-    
+
     .portfolio-filters {
         gap: 10px;
     }
-    
+
     .portfolio-filter-btn {
         padding: 10px 16px;
         font-size: 12px;
@@ -1923,61 +1923,61 @@ img.mobile-screen-1::before {
     .portfolio-hero {
         padding: 40px 0 30px;
     }
-    
+
     .portfolio-hero-content {
         gap: 20px;
     }
-    
+
     .portfolio-hero-title {
         font-size: 24px;
     }
-    
+
     .portfolio-hero-description {
         font-size: 14px;
     }
-    
+
     .portfolio-hero-illustration {
         height: 250px;
     }
-    
+
     .illustration-person-portfolio {
         width: 60px;
         height: 100px;
     }
-    
+
     .illustration-laptop-main {
         bottom: 100px;
         width: 120px;
         height: 85px;
     }
-    
+
     .illustration-laptop-side {
         bottom: 110px;
         width: 50px;
         height: 35px;
     }
-    
+
     .illustration-monitor-portfolio {
         bottom: 160px;
         width: 80px;
         height: 65px;
     }
-    
+
     .monitor-screen-portfolio {
         width: 65px;
         height: 50px;
     }
-    
+
     .rocket-icon {
         font-size: 20px;
     }
-    
+
     .illustration-cup {
         bottom: 50px;
         width: 20px;
         height: 30px;
     }
-    
+
     .illustration-plant {
         bottom: 40px;
         width: 25px;
@@ -2101,15 +2101,15 @@ img.mobile-screen-1::before {
     .modal-content {
         max-width: 95%;
     }
-    
+
     .modal-image-container {
         max-height: 60vh;
     }
-    
+
     .modal-image {
         max-height: 60vh;
     }
-    
+
     .modal-close {
         top: -50px;
         font-size: 32px;
