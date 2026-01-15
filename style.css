@@ -451,7 +451,7 @@ body {
     flex: 1;
     max-width: 100px;
     height: 2px;
-    background: #38BDF8;
+    background: #E2E8F0;
 }
 
 .section-subtitle {
@@ -2256,5 +2256,83 @@ img.mobile-screen-1::before {
     .promo-close {
         top: -35px;
         right: -5px;
+    }
+}
+
+/* Technologies Section */
+.technologies {
+    padding: 80px 0;
+    /* Gradient similar to the provided image: light blue to darker blue */
+    /* background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%); */
+    background: #ffffff;
+    color: #2563eb;
+    text-align: center;
+}
+
+.white-title {
+    color: #2563eb !important;
+}
+
+.white-line {
+    background-color: #E2E8F0 !important;
+}
+
+.white-subtitle {
+    color: #475569 !important;
+    margin-bottom: 50px;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.tech-card {
+    background: #2563eb;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    /* Square-ish based on image */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    aspect-ratio: 1 / 1;
+    /* Make them square */
+}
+
+.tech-card:hover {
+    background: #E2E8F0;
+    transform: translateY(-5px);
+}
+
+.tech-icon {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    /* Make icons white */
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 992px) {
+    .tech-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .technologies {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
