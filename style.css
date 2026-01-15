@@ -1026,6 +1026,17 @@ img.service-icon {
     text-decoration: underline;
 }
 
+.contact-phone-link {
+    color: #475569;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-phone-link:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
 .contact-icon {
     font-size: 20px;
 }
