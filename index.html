@@ -460,6 +460,50 @@
         <span class="fab-text">Get Free Consultation</span>
     </a>
 
+    <!-- Promo Popup -->
+    <div class="promo-popup" id="promoPopup">
+        <div class="promo-overlay" id="promoOverlay"></div>
+        <div class="promo-content">
+            <button class="promo-close" id="promoClose">&times;</button>
+            <div class="promo-image-container">
+                <img src="images/kamilabpromo.png" alt="Kamilab Promo" class="promo-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Promo Popup Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const promoPopup = document.getElementById('promoPopup');
+            const promoClose = document.getElementById('promoClose');
+            const promoOverlay = document.getElementById('promoOverlay');
+
+            // Check session storage to see if popup has been shown
+            if (!sessionStorage.getItem('promoPopupShown')) {
+                // Show popup after a short delay
+                setTimeout(() => {
+                    promoPopup.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                }, 1000);
+            }
+
+            function closePopup() {
+                promoPopup.classList.remove('active');
+                document.body.style.overflow = '';
+                // Set flag in session storage
+                sessionStorage.setItem('promoPopupShown', 'true');
+            }
+
+            if (promoClose) {
+                promoClose.addEventListener('click', closePopup);
+            }
+
+            if (promoOverlay) {
+                promoOverlay.addEventListener('click', closePopup);
+            }
+        });
+    </script>
+
     <script src="script.js"></script>
     <script src="portfolio-script.js"></script>
 </body>
