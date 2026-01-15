@@ -2115,3 +2115,52 @@ img.mobile-screen-1::before {
         font-size: 32px;
     }
 }
+
+/* WhatsApp Floating Action Button */
+.whatsapp-fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50px;
+    padding: 12px 24px 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.whatsapp-fab:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    background-color: #20BA5A;
+}
+
+.fab-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fab-text {
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-fab {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px;
+        border-radius: 50%;
+    }
+
+    .fab-text {
+        display: none;
+    }
+}
