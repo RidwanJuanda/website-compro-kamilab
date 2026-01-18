@@ -1520,16 +1520,16 @@ img.service-icon {
 
 .portfolio-item-image {
     width: 100%;
-    height: 273px;
+    height: 300px;
     position: relative;
     overflow: hidden;
 }
 
 /* Full height for web category to show full image */
 .portfolio-item.portfolio-item-image {
-    height: auto;
-    min-height: 400px;
-    overflow: visible;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
 }
 
 .portfolio-dashboard-bg {
@@ -1559,10 +1559,13 @@ img.service-icon {
 
 /* Full display for web category portfolio items */
 .portfolio-item[data-category="web"] .portfolio-dashboard-preview {
-    padding: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #f8fafc;
 }
 
 .portfolio-item[data-category="web"] .portfolio-dashboard-preview img.mobile-screen-1 {
