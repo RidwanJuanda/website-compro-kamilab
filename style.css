@@ -1520,7 +1520,7 @@ img.service-icon {
 
 .portfolio-item-image {
     width: 100%;
-    height: 300px;
+    height: 273px;
     position: relative;
     overflow: hidden;
 }
@@ -1550,11 +1550,12 @@ img.service-icon {
 
 .portfolio-dashboard-preview {
     width: 100%;
-    height: 100%;
-    padding: 30px;
+    max-width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin: 0 auto;
 }
 
 /* Full display for web category portfolio items */
