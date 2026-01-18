@@ -1627,7 +1627,7 @@ img.service-icon {
 .mobile-screen-2,
 .mobile-screen-3 {
     width: 120px;
-    height: 200px;
+    height: 233px;
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -1636,7 +1636,7 @@ img.service-icon {
 
 img.mobile-screen-1 {
     width: 120px;
-    height: 200px;
+    height: 233px;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
