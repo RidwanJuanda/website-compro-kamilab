@@ -2199,7 +2199,13 @@ img.mobile-screen-1::before {
 .promo-content {
     position: relative;
     width: 260px;
-    max-width: 85%;
+    max-width: 80vw;
+    /* Lebih strict dari 85% */
+    max-height: 80vh;
+    /* Cegah overflow vertikal */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: transparent;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -2245,6 +2251,10 @@ img.mobile-screen-1::before {
 .promo-image {
     width: 100%;
     height: auto;
+    max-height: 70vh;
+    /* Batasi tinggi video agar tidak memenuhi layar */
+    object-fit: contain;
+    /* Pastikan rasio terjaga */
     display: block;
 }
 
