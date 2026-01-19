@@ -661,7 +661,10 @@
             <div class="promo-image-container">
                 <a href="https://wa.me/6281212057130?text=Halo%20Tim%20Kamilab,%20Saya%20ingin%20mendapatkan%20konsultasi%20gratis."
                     target="_blank">
-                    <img src="images/kamilabpromo1.jpeg" alt="Kamilab Promo" class="promo-image">
+                    <video autoplay loop playsinline controls class="promo-image" id="promoVideo">
+                        <source src="videos/promovideo.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutaran video.
+                    </video>
                 </a>
             </div>
         </div>
@@ -680,12 +683,56 @@
                 setTimeout(() => {
                     promoPopup.classList.add('active');
                     document.body.style.overflow = 'hidden'; // Prevent scrolling
+
+                    // Try to play video with sound immediately
+                    const video = document.getElementById('promoVideo');
+                    if (video) {
+                        video.muted = false;
+                        video.volume = 1.0;
+
+                        const playPromise = video.play();
+
+                        if (playPromise !== undefined) {
+                            playPromise.then(() => {
+                                // Auto-play with sound started!
+                            }).catch(error => {
+                                console.log("Autoplay with sound blocked. Fallback to muted + interactive unmute.");
+                                // Fallback: Play muted so video at least moves
+                                video.muted = true;
+                                video.play();
+
+                                // FORCE UNMUTE on ANY interaction
+                                const enableSound = () => {
+                                    video.muted = false;
+                                    video.volume = 1.0;
+                                    video.play();
+                                    // Remove listeners once done
+                                    ['click', 'touchstart', 'keydown', 'scroll'].forEach(evt =>
+                                        document.removeEventListener(evt, enableSound, { capture: true })
+                                    );
+                                };
+
+                                // Add aggressive listeners to document
+                                ['click', 'touchstart', 'keydown', 'scroll'].forEach(evt =>
+                                    document.addEventListener(evt, enableSound, { capture: true, once: true })
+                                );
+                            });
+                        }
+                    }
                 }, 1000);
             }
 
             function closePopup() {
                 promoPopup.classList.remove('active');
                 document.body.style.overflow = '';
+
+                // Stop video reference
+                const video = document.getElementById('promoVideo');
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                }
+
                 // Set flag in session storage
                 sessionStorage.setItem('promoPopupShown', 'true');
             }

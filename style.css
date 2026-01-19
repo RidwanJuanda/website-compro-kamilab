@@ -2198,8 +2198,8 @@ img.mobile-screen-1::before {
 
 .promo-content {
     position: relative;
-    width: 90%;
-    max-width: 400px;
+    width: 260px;
+    max-width: 85%;
     background: transparent;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -2249,9 +2249,7 @@ img.mobile-screen-1::before {
 }
 
 @media (max-width: 768px) {
-    .promo-content {
-        width: 85%;
-    }
+
 
     .promo-close {
         top: -35px;
@@ -2336,6 +2334,7 @@ img.mobile-screen-1::before {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 /* Content Pages (Privacy Policy, Terms, etc.) */
 .content-page {
     padding-top: 40px;
