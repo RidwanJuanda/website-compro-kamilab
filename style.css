@@ -1775,9 +1775,9 @@ img.mobile-screen-1::before {
         order: -1;
     }
 
-    .portfolio-items-grid {
+    /* .portfolio-items-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
+    } REMOVED TO ALLOW 2 COLUMNS ON TABLET */
 
     .btn-konsultasi {
         display: none;
