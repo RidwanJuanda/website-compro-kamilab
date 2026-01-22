@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog - Kamilab</title>
+    <meta name="description" content="Baca artikel terbaru dari Kamilab seputar teknologi dan pengembangan software.">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styles for blog page to handle iframe height */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            flex-shrink: 0;
+        }
+
+        .blog-container {
+            flex-grow: 1;
+            width: 100%;
+            height: calc(100vh - 81px);
+            /* Adjust based on header height, roughly 81px */
+            overflow: hidden;
+        }
+
+        .blog-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Mobile menu adjustment */
+        @media (max-width: 768px) {
+            .blog-container {
+                height: calc(100vh - 60px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <img src="images/ic-logo-dark-blue.png" alt="KAMILAB Icon" class="logo-icon-left">
+                    <img src="images/ic-logo-text-dark-blue.png" alt="KAMILAB Logo" class="logo-icon">
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu"
+                    onclick="toggleMobileMenu(event)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav" id="mainNav">
+                    <a href="index.html" class="nav-link">Beranda</a>
+                    <a href="index.html#layanan" class="nav-link">Layanan Kami</a>
+                    <a href="portfolio.html" class="nav-link">Portofolio</a>
+                    <a href="index.html#kontak" class="nav-link">Kontak Kami</a>
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="blog-container">
+        <iframe src="https://ridwanjuanda.wordpress.com/" class="blog-iframe" title="Blog Kamilab">
+        </iframe>
+    </div>
+
+    <!-- Mobile Menu Script Reuse -->
+    <script>
+        // Copying the mobile menu logic specifically for this page or reuse script.js if applicable
+        // Since script.js has specific home page logic (hero slider etc), 
+        // we'll keep it simple here or check if script.js is safe to include.
+        // Looking at script.js, it has hero slider code that might error if elements are missing.
+        // It's safer to include a lightweight inline script for the menu or check if script.js handles missing elements gracefully.
+        // The script.js read previously showed it checks for elements existence.
+
+        function toggleMobileMenu(e) {
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mainNav = document.getElementById('mainNav');
+            if (mobileMenuToggle && mainNav) {
+                mobileMenuToggle.classList.toggle('active');
+                mainNav.classList.toggle('active');
+                document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+            }
+        }
+    </script>
+</body>
+
+</html>
