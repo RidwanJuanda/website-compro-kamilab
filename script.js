@@ -535,3 +535,26 @@
         });
     }
 })();
+
+// Technologies Show More Toggle
+(function () {
+    'use strict';
+
+    function initTechShowMore() {
+        const btn = document.getElementById('techShowMoreBtn');
+        const grid = document.getElementById('techGrid');
+
+        if (!btn || !grid) return;
+
+        btn.addEventListener('click', function () {
+            grid.classList.remove('collapsed');
+            btn.parentElement.style.display = 'none';
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initTechShowMore);
+    } else {
+        initTechShowMore();
+    }
+})();
