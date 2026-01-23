@@ -1600,18 +1600,9 @@ img.service-icon {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
     border-radius: 4px;
     position: relative;
+
 }
 
-.chart-line::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.5);
-    transform: translateY(-50%);
-}
 
 .portfolio-mobile-preview {
     width: 100%;
@@ -1623,12 +1614,21 @@ img.service-icon {
     padding: 40px;
 }
 
-.mobile-screen-1,
-.mobile-screen-2,
-.mobile-screen-3 {
+img.mobile-screen-3 {
     width: 120px;
-    height: 200px;
-    background: #ffffff;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: block;
+    background: none;
+}
+
+img.mobile-screen-2 {
+    width: 120px;
+    height: 220px;
+    object-fit: cover;
+    background: transparent;
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -1642,24 +1642,6 @@ img.mobile-screen-1 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: block;
     background: none;
-}
-
-.mobile-screen-1::before,
-.mobile-screen-2::before,
-.mobile-screen-3::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 80%;
-    background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
-    border-radius: 12px;
-}
-
-img.mobile-screen-1::before {
-    display: none;
 }
 
 .portfolio-branding-preview {
