@@ -1727,6 +1727,93 @@ img.mobile-screen-1 {
     align-self: center;
 }
 
+/* UI/UX Grid */
+/* ===== GRID LAYOUT ===== */
+.portfolio-item-uiux-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e3a8a;
+    margin: 20px;
+
+    border-radius: 10px;
+}
+
+.uiux-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 32px;
+}
+
+.uiux-card {
+    position: relative;
+    overflow: hidden;
+    /* border-radius: 18px; */
+    cursor: pointer;
+    padding: 0;
+}
+
+.uiux-item {
+    width: 100%;
+    height: 320px;
+
+    display: block;
+    margin: 0;
+
+    object-fit: contain;
+    /* background: linear-gradient(90deg, #e0f2fe 0%, #bfdbfe 100%); */
+}
+
+/* card hover lift */
+.uiux-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* zoom */
+.uiux-card:hover .uiux-item {
+    transform: scale(1.08);
+}
+
+/* ===== OVERLAY ===== */
+.uiux-card::after {
+    content: attr(data-title);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 18px;
+    font-size: 16px;
+    font-weight: 600;
+
+    background: linear-gradient(to bottom, transparent, #1e3a8a, #1e3a8a);
+    /* background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));*/
+    color: white;
+
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.uiux-card:hover::after {
+    opacity: 1;
+}
+
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .uiux-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .uiux-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .portfolio-item-content {
     padding: 30px;
 }
