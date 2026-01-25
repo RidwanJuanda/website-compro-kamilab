@@ -40,6 +40,16 @@
                     }, 300);
                 }
             });
+
+            // Toggle branding description visibility
+            const brandingDesc = document.getElementById('branding-description');
+            if (brandingDesc) {
+                if (filterValue === 'branding') {
+                    brandingDesc.style.display = 'block';
+                } else {
+                    brandingDesc.style.display = 'none';
+                }
+            }
         });
     });
     

@@ -1499,6 +1499,29 @@ img.service-icon {
     border-color: #2563eb;
 }
 
+.branding-description {
+    text-align: center;
+    max-width: 800px;
+    margin: -30px auto 40px;
+    padding: 0 20px;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.6;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .portfolio-items-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
