@@ -558,3 +558,56 @@
         initTechShowMore();
     }
 })();
+
+// Scroll to Top Button
+(function () {
+    'use strict';
+
+    function initScrollToTop() {
+        // Create button element dynamically
+        const button = document.createElement('button');
+        button.className = 'scroll-to-top';
+        button.setAttribute('aria-label', 'Scroll to top');
+        button.innerHTML = `
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        `;
+
+        document.body.appendChild(button);
+
+        // Show/Hide logic
+        function toggleButton() {
+            if (window.scrollY > 300) {
+                button.classList.add('show');
+            } else {
+                button.classList.remove('show');
+            }
+        }
+
+        // Scroll listener
+        window.addEventListener('scroll', toggleButton, { passive: true });
+
+        // Click listener
+        button.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Check if at bottom of page (allow 50px buffer)
+            const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50;
+
+            if (isAtBottom) {
+                // Smooth scroll otherwise
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initScrollToTop);
+    } else {
+        initScrollToTop();
+    }
+})();

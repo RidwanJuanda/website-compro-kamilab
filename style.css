@@ -2259,7 +2259,7 @@ img.mobile-screen-1 {
 @media (max-width: 768px) {
     .whatsapp-fab {
         bottom: 20px;
-        right: 20px;
+        right: 35px;
         padding: 12px;
         border-radius: 50%;
     }
@@ -2619,5 +2619,59 @@ img.mobile-screen-1 {
 @media (max-width: 480px) {
     .tech-grid.collapsed .tech-card:nth-child(n+5) {
         display: none;
+    }
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 999;
+    border: none;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 80px;
+        right: 39px;
+        width: 40px;
+        height: 40px;
     }
 }
