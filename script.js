@@ -596,6 +596,12 @@
             const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50;
 
             if (isAtBottom) {
+                // Instant scroll if at bottom
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'instant'
+                });
+            } else {
                 // Smooth scroll otherwise
                 window.scrollTo({
                     top: 0,
