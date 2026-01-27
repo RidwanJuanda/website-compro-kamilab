@@ -195,7 +195,7 @@ body {
 }
 
 .btn-primary {
-    background: #2563eb;
+    background-color: #2563eb;
     color: #ffffff;
     border: none;
     padding: 16px 32px;
@@ -203,14 +203,14 @@ body {
     font-weight: bold;
     cursor: pointer;
     border-radius: 8px;
-    transition: background 0.3s;
+    transition: background-color 0.3s;
     text-decoration: none;
     display: inline-block;
     width: fit-content;
 }
 
 .btn-primary:hover {
-    background: #1d4ed8;
+    background-color: #1d4ed8;
 }
 
 .hero-image {
@@ -2673,5 +2673,339 @@ img.mobile-screen-1 {
         right: 39px;
         width: 40px;
         height: 40px;
+    }
+}
+
+/* Development Process Section */
+.dev-process {
+    background: #f8fafc;
+    padding: 80px 0;
+}
+
+.section-header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.process-header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dev-process-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2563eb;
+    margin: 0;
+    text-align: center;
+}
+
+.dev-process-subtitle {
+    font-size: 18px;
+    color: #666666;
+    text-align: center !important;
+    justify-content: center !important;
+    width: 100%;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.process-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f1f5f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.process-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    /* Generic placeholder styling if svg is complex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.process-icon-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.process-title {
+    font-size: 16px;
+    color: #1e3a8a;
+    font-weight: 600;
+    margin: 0;
+}
+
+.process-desc {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+}
+
+.process-cta-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-process-cta {
+    padding: 14px 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    background: #2563eb;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-process-cta:hover {
+    background: #1d4ed8;
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dev-process-title {
+        font-size: 24px;
+    }
+}
+
+/* Business Process Section */
+.business-process {
+    /* background: linear-gradient(135deg, #ffffff 0%, #bfdbfe 100%); */
+    background: linear-gradient(135deg, #38BDF8 0%, #E2E8F0 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.bp-header-icon {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.bp-title {
+    color: #0f172a;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.bp-subtitle {
+    margin-bottom: 60px;
+}
+
+/* Timeline Layout */
+.bp-timeline-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+/* The Horizontal Line */
+.bp-line {
+    position: absolute;
+    bottom: 54px;
+    /* Adjust based on label height and dot position */
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e2e8f0;
+    z-index: 1;
+}
+
+.bp-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    padding: 0 10px;
+    min-width: 0;
+    /* allows flex box to shrink below content size if needed, though padding prevents it */
+}
+
+.bp-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f1f5f9;
+    width: 100%;
+    margin-bottom: 30px;
+    /* Space for connector */
+    min-height: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.bp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.bp-icon-circle {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bp-icon-svg {
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.bp-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.bp-card-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Vertical Connector Line from Card to Dot */
+.bp-connector {
+    width: 1px;
+    height: 30px;
+    /* Connects card bottom to dot top */
+    background: #e2e8f0;
+    margin-bottom: 0;
+}
+
+.bp-dot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    background: transparent;
+}
+
+.bp-dot {
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border: 4px solid #3b82f6;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+    /* Glow effect */
+}
+
+.bp-step-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0f172a;
+    margin-top: 5px;
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .bp-timeline-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+        gap: 20px;
+    }
+
+    .bp-line {
+        width: 1px;
+        height: 100%;
+        left: 35px;
+        /* Adjust to align with dots */
+        top: 0;
+        bottom: 0;
+        right: auto;
+    }
+
+    .bp-step {
+        flex-direction: row;
+        align-items: flex-start;
+        width: 100%;
+        padding: 0;
+    }
+
+    .bp-dot-container {
+        order: 1;
+        margin-right: 20px;
+        margin-top: 24px;
+        /* Align with card top approx */
+        width: 30px;
+        /* Disable vertical connector logic for mobile, or adjust */
+    }
+
+    .bp-connector {
+        display: none;
+    }
+
+    .bp-card {
+        order: 2;
+        margin-bottom: 0;
+        width: calc(100% - 60px);
+    }
+
+    .bp-step-label {
+        display: none;
+        /* Hide label below dot in mobile, title is in card */
     }
 }
