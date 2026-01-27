@@ -2753,8 +2753,9 @@ img.mobile-screen-1 {
 }
 
 .process-icon-svg {
-    width: 100%;
-    height: 100%;
+    width: 75px;
+    height: 75px;
+    color: #0EA5E9;
 }
 
 .process-title {
