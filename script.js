@@ -625,7 +625,7 @@
     function initScrollAnimations() {
         const observerOptions = {
             root: null,
-            rootMargin: '0px',
+            rootMargin: '0px 0px -50px 0px', // Trigger slightly before element leaves viewport, but mainly when it enters
             threshold: 0.1
         };
 
@@ -640,6 +640,16 @@
 
         const fadeElements = document.querySelectorAll('.fade-in-section');
         fadeElements.forEach(el => observer.observe(el));
+
+        // Fallback: If intersection observer fails or for elements already in view that didn't trigger
+        setTimeout(() => {
+            fadeElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    el.classList.add('is-visible');
+                }
+            });
+        }, 500);
     }
 
     if (document.readyState === 'loading') {
