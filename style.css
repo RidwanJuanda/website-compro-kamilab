@@ -3035,3 +3035,261 @@ img.mobile-screen-1 {
         /* Hide label below dot in mobile, title is in card */
     }
 }
+
+/* =========================================
+   Visual Enhancements & Animations
+   ========================================= */
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 30px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+/* Staggered delays for child elements if needed */
+.fade-delay-100 {
+    transition-delay: 0.1s;
+}
+
+.fade-delay-200 {
+    transition-delay: 0.2s;
+}
+
+.fade-delay-300 {
+    transition-delay: 0.3s;
+}
+
+/* Enhanced Card Hover Effects */
+.service-card,
+.portfolio-card,
+.team-card,
+.process-card,
+.bp-card {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.service-card:hover,
+.portfolio-card:hover,
+.team-card:hover,
+.process-card:hover,
+.bp-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Micro-interactions for Buttons */
+.btn-primary,
+.btn-more-portfolio,
+.btn-submit,
+.btn-konsultasi,
+.btn-portfolio-contact {
+    transition: all 0.2s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:active,
+.btn-more-portfolio:active,
+.btn-submit:active,
+.btn-konsultasi:active,
+.btn-portfolio-contact:active {
+    transform: scale(0.96);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific Service Card Enhancement */
+.service-card .service-icon {
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Specific Portfolio Card Enhancement */
+.portfolio-image {
+    transition: transform 0.6s ease;
+}
+
+.portfolio-card:hover .portfolio-image img {
+    transform: scale(1.05);
+    transition: transform 0.6s ease;
+}
+
+/* Specific Team Card Enhancement */
+.team-image-wrapper {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover .team-image-wrapper {
+    border-color: #2563eb;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.3);
+}
+
+.social-icon {
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* =========================================
+   Interactive Workflow Enhancements
+   ========================================= */
+
+/* Timeline Progress Line */
+.bp-line-progress {
+    display: none;
+    /* Inherit logic from bp-line */
+    position: absolute;
+    background: #2563eb;
+    z-index: 1;
+    transition: width 1s linear, height 1s linear;
+}
+
+/* Desktop Progress Position */
+@media (min-width: 993px) {
+    .bp-line-progress {
+        display: block;
+        bottom: 54px;
+        left: 0;
+        height: 1px;
+        width: 0%;
+        /* JS will animate this */
+    }
+}
+
+/* Mobile Progress Position */
+@media (max-width: 992px) {
+    .bp-line-progress {
+        display: block;
+        left: 35px;
+        top: 0;
+        width: 1px;
+        height: 0%;
+        /* JS will animate this */
+    }
+}
+
+/* Active Step States */
+.bp-step.active .bp-dot {
+    background: #2563eb;
+    box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.2);
+    transform: scale(1.1);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bp-step.active .bp-card {
+    border-color: #bfdbfe;
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.15);
+    transform: translateY(-8px);
+}
+
+.bp-step.active .bp-icon-circle {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.bp-step.active .bp-icon-svg {
+    animation: bounce-slight 2s infinite ease-in-out;
+}
+
+/* Connector coloring */
+.bp-step.active .bp-connector {
+    background: #2563eb;
+    transition: background 0.5s ease;
+}
+
+/* Arrow coloring on desktop */
+@media (min-width: 993px) {
+    .bp-step.active:not(:last-child)::after {
+        color: #2563eb;
+        animation: pulse-arrow 1.5s infinite;
+    }
+}
+
+/* Animations */
+@keyframes bounce-slight {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes pulse-arrow {
+
+    0%,
+    100% {
+        transform: translateX(50%) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(60%) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Process Grid Flow Indicator */
+.process-card {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Subtle glow moving across card on hover */
+.process-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.05), transparent);
+    transition: left 0.5s ease;
+    z-index: -1;
+}
+
+.process-card:hover::before {
+    left: 100%;
+}
+
+/* Icon Animation in Process Cards */
+.process-card:hover .process-icon-svg path {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: draw-stroke 1s forwards;
+}
+
+@keyframes draw-stroke {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

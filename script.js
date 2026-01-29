@@ -617,3 +617,106 @@
         initScrollToTop();
     }
 })();
+
+// Scroll Animation Observer
+(function () {
+    'use strict';
+
+    function initScrollAnimations() {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        const fadeElements = document.querySelectorAll('.fade-in-section');
+        fadeElements.forEach(el => observer.observe(el));
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initScrollAnimations);
+    } else {
+        initScrollAnimations();
+    }
+})();
+
+// Business Process Interactive Timeline
+(function () {
+    'use strict';
+
+    function initTimelineAnimations() {
+        const steps = document.querySelectorAll('.bp-step');
+        const progressLine = document.querySelector('.bp-line-progress');
+        const timelineWrapper = document.querySelector('.bp-timeline-wrapper');
+
+        if (steps.length === 0 || !progressLine) return;
+
+        // Observer to toggle active state on steps
+        const observerOptions = {
+            root: null,
+            rootMargin: '-40% 0px -40% 0px', // Active when in middle 20% of screen
+            threshold: 0
+        };
+
+        const stepObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    updateProgress();
+                } else {
+                    // Optional: remove active class when scrolling out
+                    // entry.target.classList.remove('active');
+                }
+            });
+        }, observerOptions);
+
+        steps.forEach(step => stepObserver.observe(step));
+
+        // Function to update progress line based on active steps
+        function updateProgress() {
+            // Find the last active step index
+            let lastActiveIndex = -1;
+            steps.forEach((step, index) => {
+                if (step.classList.contains('active')) {
+                    lastActiveIndex = index;
+                }
+            });
+
+            if (lastActiveIndex >= 0) {
+                const totalSteps = steps.length;
+                // Calculate percentage: if 5 steps, 4 intervals.
+                // Step index 0 = 0%, 1 = 25%, 2 = 50%, 3 = 75%, 4 = 100%
+                const percentage = (lastActiveIndex / (totalSteps - 1)) * 100;
+
+                // Check media query for mobile vs desktop logic
+                if (window.innerWidth >= 993) {
+                    // Desktop: Width
+                    progressLine.style.width = `${percentage}%`;
+                    progressLine.style.height = '1px';
+                } else {
+                    // Mobile: Height
+                    progressLine.style.height = `${percentage}%`;
+                    progressLine.style.width = '1px';
+                }
+            }
+        }
+
+        // Update on resize too
+        window.addEventListener('resize', updateProgress);
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initTimelineAnimations);
+    } else {
+        initTimelineAnimations();
+    }
+})();
