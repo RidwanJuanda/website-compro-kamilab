@@ -365,7 +365,8 @@ body {
 
 /* Services Overview Section */
 .services-overview {
-    background: linear-gradient(to bottom, #e0f2fe 0%, #ffffff 5%, #ffffff 95%, #e0f2fe 100%);
+    /* background: linear-gradient(to bottom, #e0f2fe 0%, #ffffff 5%, #ffffff 95%, #e0f2fe 100%); */
+    background: #e0f2fe;
     padding: 40px 0;
 }
 
@@ -427,7 +428,7 @@ body {
 
 /* Services Section */
 .services {
-    background: #e0f2fe;
+    background: #f8fafc;
     padding: 80px 0;
 }
 
@@ -514,7 +515,7 @@ img.service-icon {
 
 /* Portfolio Section */
 .portfolio {
-    background: #ffffff;
+    background: #f8fafc;
     padding: 80px 0;
 }
 
@@ -689,7 +690,7 @@ img.service-icon {
     font-weight: bold;
     cursor: pointer;
     border-radius: 8px;
-    transition: background 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
     text-decoration: none;
     display: inline-block;
 }
@@ -701,8 +702,8 @@ img.service-icon {
 
 /* Our Team Section */
 .team-section {
-    /* background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 100%); */
-    background: linear-gradient(135deg, #ffffff 0%, #bfdbfe 100%);
+    background: #e0f2fe;
+    /* background: linear-gradient(135deg, #ffffff 0%, #bfdbfe 100%); */
     padding: 80px 0;
     position: relative;
     overflow: hidden;
@@ -855,9 +856,9 @@ img.service-icon {
 
 /* Footer Section */
 .footer {
-    /* background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%); */
-    background: linear-gradient(135deg, #bfdbfe 0%, #ffffff 100%);
-    padding: 80px 0 40px;
+    background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
+    /* background: #2563eb; */
+    padding: 80px 0 20px;
 }
 
 .footer-content {
@@ -871,6 +872,7 @@ img.service-icon {
     background: #e0f2fe;
     padding: 40px;
     border-radius: 12px;
+    margin-bottom: 20px;
 }
 
 .footer-title {
@@ -2377,7 +2379,7 @@ img.mobile-screen-1 {
     padding: 80px 0;
     /* Gradient similar to the provided image: light blue to darker blue */
     /* background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%); */
-    background: #ffffff;
+    background: #f8fafc;
     color: #2563eb;
     text-align: center;
 }
@@ -2485,8 +2487,8 @@ img.mobile-screen-1 {
 
 /* Clients Section */
 .clients-section {
-    /* background: #f8fafc; */
-    background: linear-gradient(135deg, #ffffff 0%, #bfdbfe 100%);
+    background: #e0f2fe;
+    /* background: linear-gradient(135deg, #ffffff 0%, #bfdbfe 100%); */
     padding: 80px 0;
     text-align: center;
 }
@@ -2818,8 +2820,8 @@ img.mobile-screen-1 {
 
 /* Business Process Section */
 .business-process {
-    background: linear-gradient(135deg, #F8FAFC 0%, #e0f2fe 100%);
-    /* background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 100%); */
+    /* background: linear-gradient(135deg, #F8FAFC 0%, #e0f2fe 100%); */
+    background: #e0f2fe;
     padding: 80px 0;
     position: relative;
     overflow: hidden;
@@ -3411,8 +3413,8 @@ img.mobile-screen-1 {
 
 /* Why Choose Us Section */
 .why-choose-us {
-    /* background: #F8FAFC; */
-    background: linear-gradient(135deg, #e0f2fe 0%, #F8FAFC 100%);
+    background: #F8FAFC;
+    /* background: linear-gradient(135deg, #e0f2fe 0%, #F8FAFC 100%); */
     padding: 80px 0;
 }
 
@@ -3682,7 +3684,7 @@ img.mobile-screen-1 {
 
 /* About Section */
 .mk-about {
-    background: #ffffff;
+    background: #e0f2fe;
     padding: 40px 0;
 }
 
@@ -3820,7 +3822,7 @@ img.mobile-screen-1 {
 
 /* Why Choose Us Section */
 .mk-why {
-    background: #ffffff;
+    background: #e0f2fe;
     padding: 80px 0;
 }
 
@@ -3868,13 +3870,132 @@ img.mobile-screen-1 {
 
 /* Client & Portfolio Placeholder */
 .mk-clients {
-    background: #f8fafc;
+    background: #e0f2fe;
     padding: 60px 0;
     text-align: center;
 }
 
+/* Service Models Section */
+.mk-service-models {
+    background: #f8fafc;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.mk-models-header {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.mk-models-description {
+    font-size: 16px;
+    color: #475569;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.mk-models-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.mk-models-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mk-illustration-placeholder {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mk-illustration-placeholder img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.mk-models-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mk-model-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.mk-model-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-color: #bfdbfe;
+}
+
+.mk-model-number {
+    background: #2563EB;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mk-model-content {
+    flex: 1;
+}
+
+.mk-model-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+}
+
+.mk-model-desc {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
+    .mk-models-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .mk-models-image {
+        order: -1;
+        width: 100%;
+    }
+
+    .mk-models-header {
+        text-align: center;
+    }
 
     .mk-hero-container,
     .mk-about-container {
