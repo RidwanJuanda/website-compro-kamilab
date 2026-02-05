@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Muda Konsultan | Finance & Tax Consultants</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Muda Konsultan - Konsultan Keuangan dan Pajak untuk Bisnis Anda. Optimalkan manajemen keuangan dan kepatuhan pajak.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://itkamilab.com/muda-konsultan.html">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KY6PDKT8P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0KY6PDKT8P');
+    </script>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <img src="images/ic-logo-dark-blue.png" alt="KAMILAB Icon" class="logo-icon-left">
+                    <img src="images/ic-logo-text-dark-blue.png" alt="KAMILAB Logo" class="logo-icon">
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu"
+                    onclick="toggleMobileMenu(event)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav" id="mainNav">
+                    <a href="index.html" class="nav-link">Beranda</a>
+                    <a href="index.html#layanan" class="nav-link">Layanan Kami</a>
+                    <a href="portfolio.html" class="nav-link">Portofolio</a>
+                    <a href="muda-konsultan.html" class="nav-link active">Muda Konsultan</a>
+                    <a href="index.html#kontak" class="nav-link">Kontak Kami</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in-section">
+                <div class="hero-text">
+                    <h1 class="hero-title">Konsultan Keuangan & Pajak</h1>
+                    <p class="hero-description">Konsultasi bukan hanya tentang memberikan nasihat—tetapi juga tentang
+                        menciptakan strategi yang dapat ditindaklanjuti dan menghasilkan dampak yang terukur. Pendekatan
+                        kami berfokus pada pemahaman kebutuhan klien dan membangun solusi yang disesuaikan. Kami
+                        berkolaborasi erat dengan para pemangku kepentingan, menggabungkan keahlian dengan wawasan
+                        industri untuk memastikan rekomendasi yang diberikan praktis, dapat diskalakan, dan berorientasi
+                        pada hasil.</p>
+                    <a href="#kontak" class="btn-primary">Hubungi Kami</a>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-banner-slider">
+                        <img src="images/muda-konsultan/muda-banner-tim.png" alt="Hero Banner"
+                            class="hero-banner-image">
+                        <img src="images/muda-konsultan/muda-banner-tax.png" alt="Hero Banner"
+                            class="hero-banner-image active">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="mk-about">
+        <div class="container">
+            <div class="mk-center-header">
+                <h2 class="mk-section-title">Tentang Kami</h2>
+                <p class="mk-section-subtitle">Solusi Komprehensif Kami</p>
+            </div>
+            <div class="mk-about-container">
+                <div class="mk-about-image">
+                    <img src="images/muda-konsultan/muda-tentang-kami.png" alt="Expert Guidance"
+                        class="mk-img-responsive">
+                </div>
+                <div class="mk-about-content">
+                    <div class="mk-about-header">
+                        <!-- <span class="mk-section-label">Tentang</span> -->
+                        <img src="images/muda-konsultan/ic-muda-konsultan.png" alt="Muda Konsultan Icon"
+                            class="mk-brand-icon">
+                    </div>
+                    <h2 class="mk-section-title">Panduan Ahli untuk Memperkuat Fondasi Keuangan Anda</h2>
+                    <p class="mk-section-desc">
+                        Muda Konsultan merupakan lambang keunggulan dalam konsultasi pajak, menawarkan panduan yang
+                        cermat
+                        dan solusi strategis untuk menavigasi lanskap pajak yang kompleks dengan tepat dan ahli.</br>
+                        Didukung oleh teknologi dari <a href="index.html" style="color: #0EA5E9;">Kamilab</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="mk-services">
+        <div class="container">
+            <div class="mk-center-header">
+                <h2 class="mk-section-title">Layanan Keuangan & Pajak</h2>
+                <p class="mk-section-subtitle">Solusi Komprehensif Kami</p>
+            </div>
+
+            <div class="mk-grid-4">
+                <!-- Service 1 -->
+                <div class="mk-card">
+                    <div class="mk-icon-box">
+                        <svg class="mk-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="4" width="18" height="16" rx="2" stroke="#2563EB" stroke-width="2" />
+                            <path d="M7 8H17" stroke="#2563EB" stroke-width="2" stroke-linecap="round" />
+                            <path d="M7 12H17" stroke="#2563EB" stroke-width="2" stroke-linecap="round" />
+                            <path d="M7 16H13" stroke="#2563EB" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="mk-card-title">Akuntansi & Pelaporan</h3>
+                    <ul class="mk-feature-list">
+                        <li>
+                            <span class="mk-badge-number">1</span>
+                            <span>Laporan keuangan bulanan dan tahunan</span>
+                        </li>
+                        <li>
+                            <span class="mk-badge-number">2</span>
+                            <span>Tinjauan internal dan dukungan audit ringan</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Service 2 -->
+                <div class="mk-card">
+                    <div class="mk-icon-box">
+                        <svg class="mk-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#2563EB" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M2 17L12 22L22 17" stroke="#2563EB" stroke-width="2" stroke-linejoin="round" />
+                            <path d="M2 12L12 17L22 12" stroke="#2563EB" stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="mk-card-title">Konsultasi Keuangan</h3>
+                    <ul class="mk-feature-list">
+                        <li>
+                            <span class="mk-badge-number">1</span>
+                            <span>Analisis arus kas</span>
+                        </li>
+                        <li>
+                            <span class="mk-badge-number">2</span>
+                            <span>Penyusunan anggaran dan peramalan</span>
+                        </li>
+                        <li>
+                            <span class="mk-badge-number">3</span>
+                            <span>Dasbor keuangan dan pemantauan KPI</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Service 3 -->
+                <div class="mk-card">
+                    <div class="mk-icon-box">
+                        <svg class="mk-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+                                stroke="#2563EB" stroke-width="2" stroke-linejoin="round" />
+                            <path d="M14 2V8H20" stroke="#2563EB" stroke-width="2" stroke-linejoin="round" />
+                            <path d="M16 13H8" stroke="#2563EB" stroke-width="2" stroke-linejoin="round" />
+                            <path d="M16 17H8" stroke="#2563EB" stroke-width="2" stroke-linejoin="round" />
+                            <path d="M10 9H9H8" stroke="#2563EB" stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="mk-card-title">Jasa Pajak</h3>
+                    <ul class="mk-feature-list">
+                        <li>
+                            <span class="mk-badge-number">1</span>
+                            <span>Pengajuan pajak bulanan dan tahunan</span>
+                        </li>
+                        <li>
+                            <span class="mk-badge-number">2</span>
+                            <span>Perencanaan dan optimalisasi pajak</span>
+                        </li>
+                        <li>
+                            <span class="mk-badge-number">3</span>
+                            <span>Peninjauan kepatuhan pajak & bantuan audit</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Service 4 -->
+                <div class="mk-card">
+                    <div class="mk-icon-box">
+                        <svg class="mk-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21"
+                                stroke="#2563EB" stroke-width="2" stroke-linejoin="round" />
+                            <path
+                                d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z"
+                                stroke="#2563EB" stroke-width="2" stroke-linejoin="round" />
+                            <path
+                                d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13"
+                                stroke="#2563EB" stroke-width="2" stroke-linejoin="round" />
+                            <path
+                                d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88"
+                                stroke="#2563EB" stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="mk-card-title">Model Layanan</h3>
+                    <ul class="mk-feature-list">
+                        <li>
+                            <span class="mk-badge-number">1</span>
+                            <span>Layanan berbasis proyek</span>
+                        </li>
+                        <li>
+                            <span class="mk-badge-number">2</span>
+                            <span>Retainer bulanan</span>
+                        </li>
+                        <li>
+                            <span class="mk-badge-number">3</span>
+                            <span>Kombinasi keduanya</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="mk-why">
+        <div class="container">
+            <div class="mk-center-header">
+                <h2 class="mk-section-title">Kenapa Pilih Kami?</h2>
+                <p class="mk-section-subtitle">Keuntungan Utama Bekerja Sama dengan Kami</p>
+            </div>
+
+            <div class="mk-grid-4">
+                <!-- Benefit 1 -->
+                <div class="mk-card mk-card-row">
+                    <div class="mk-icon-small">
+                        <svg class="mk-icon-xs" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999"
+                                stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M22 4L12 14.01L9 11.01" stroke="#2563EB" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="mk-card-content">
+                        <h3 class="mk-card-title-sm">Laporan Keuangan yang Andal</h3>
+                        <p class="mk-card-desc-sm">Laporan keuangan yang akurat dan siap diaudit.</p>
+                    </div>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="mk-card mk-card-row">
+                    <div class="mk-icon-small">
+                        <svg class="mk-icon-xs" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                stroke="#2563EB" stroke-width="2" stroke-linejoin="round" />
+                            <path d="M12 16V12" stroke="#2563EB" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12 8H12.01" stroke="#2563EB" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="mk-card-content">
+                        <h3 class="mk-card-title-sm">Optimasi Pajak</h3>
+                        <p class="mk-card-desc-sm">Mengurangi kerumitan pajak, strategi pajak yang lebih cerdas.</p>
+                    </div>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="mk-card mk-card-row">
+                    <div class="mk-icon-small">
+                        <svg class="mk-icon-xs" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21"
+                                stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z"
+                                stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="mk-card-content">
+                        <h3 class="mk-card-title-sm">Konsultasi yang Disesuaikan</h3>
+                        <p class="mk-card-desc-sm">Konsultasi yang fleksibel dan disesuaikan dengan kebutuhan Anda.</p>
+                    </div>
+                </div>
+                <!-- Benefit 4 -->
+                <div class="mk-card mk-card-row">
+                    <div class="mk-icon-small">
+                        <svg class="mk-icon-xs" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 12H18L15 21L9 3L6 12H2" stroke="#2563EB" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="mk-card-content">
+                        <h3 class="mk-card-title-sm">Rekam Jejak Terbukti</h3>
+                        <p class="mk-card-desc-sm">Dipercaya oleh bisnis terkemuka di berbagai industri.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="mk-clients">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-title-line"></span>
+                <span class="section-title-text">Klien Kami</span>
+                <span class="section-title-line"></span>
+            </h2>
+            <p class="section-subtitle">Brand masa depan mempercayai Kamilab untuk mendorong pertumbuhan dan
+                keterlibatan yang skalabel.</p>
+
+            <div class="clients-marquee">
+                <div class="clients-track">
+                    <div class="client-card">
+                        <img src="images/muda-konsultan/ic-clycks.png" alt="Clycks Digital" class="client-icon">
+                        <span class="client-name">Clycks Digital</span>
+                    </div>
+                    <div class="client-card">
+                        <img src="images/ic-bca.png" alt="BCA" class="client-icon">
+                        <span class="client-name">BCA</span>
+                    </div>
+                    <div class="client-card">
+                        <img src="images/ic-layar.png" alt="Layar" class="client-icon">
+                        <span class="client-name">Layar</span>
+                    </div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="client-card">
+                        <img src="images/muda-konsultan/ic-clycks.png" alt="Clycks Digital" class="client-icon">
+                        <span class="client-name">Clycks Digital</span>
+                    </div>
+                    <div class="client-card">
+                        <img src="images/ic-bca.png" alt="BCA" class="client-icon">
+                        <span class="client-name">BCA</span>
+                    </div>
+                    <div class="client-card">
+                        <img src="images/ic-layar.png" alt="Layar" class="client-icon">
+                        <span class="client-name">Layar</span>
+                    </div>
+                    <!-- Duplicate 2 for infinite scroll (Wide Screens) -->
+                    <div class="client-card">
+                        <img src="images/muda-konsultan/ic-clycks.png" alt="Clycks Digital" class="client-icon">
+                        <span class="client-name">Clycks Digital</span>
+                    </div>
+                    <div class="client-card">
+                        <img src="images/ic-bca.png" alt="BCA" class="client-icon">
+                        <span class="client-name">BCA</span>
+                    </div>
+                    <div class="client-card">
+                        <img src="images/ic-layar.png" alt="Layar" class="client-icon">
+                        <span class="client-name">Layar</span>
+                    </div>
+                    <div class="client-card">
+                        <img src="images/ic-layar.png" alt="Layar" class="client-icon">
+                        <span class="client-name">Layar</span>
+                    </div>
+                    <!-- Duplicate 3 for infinite scroll (Ultra Wide Screens) -->
+                    <div class="client-card">
+                        <img src="images/muda-konsultan/ic-clycks.png" alt="Clycks Digital" class="client-icon">
+                        <span class="client-name">Clycks Digital</span>
+                    </div>
+                    <div class="client-card">
+                        <img src="images/ic-bca.png" alt="BCA" class="client-icon">
+                        <span class="client-name">BCA</span>
+                    </div>
+                    <div class="client-card">
+                        <img src="images/ic-layar.png" alt="Layar" class="client-icon">
+                        <span class="client-name">Layar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontak" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- <div class="footer-about">
+                    <h3 class="about-main-title">Tentang Kami</h3>
+                    <div class="about-title-line"></div>
+                    <p class="about-description">
+                        Kamilab adalah partner teknologi yang membantu perusahaan merancang, membangun, dan
+                        mengembangkan solusi digital yang scalable, aman, dan siap mendukung pertumbuhan bisnis.
+
+                        Kami mengembangkan aplikasi web, mobile, serta sistem bisnis kustom yang dirancang untuk
+                        meningkatkan efisiensi operasional dan memberikan pengalaman pengguna yang optimal.
+                        <br><br>
+                        Didukung tim profesional dengan pengalaman lebih dari 10 tahun di industri teknologi, kami
+                        bekerja dengan proses yang transparan, terukur, dan berorientasi pada hasil yang memberikan
+                        dampak nyata.
+                        <br><br>
+                        Kami percaya teknologi bukan sekadar sistem, tetapi investasi jangka panjang untuk pertumbuhan
+                        bisnis Anda.
+                        <a href="#" class="btn-read-more">Read More ></a> -->
+                <!-- <div class="footer-map">
+                    <iframe
+                        src="https://maps.google.com/maps?q=-6.243787786173724,106.86915949825007&hl=en&z=15&output=embed"
+                        width="100%" height="300" style="border:1px solid #0EA5E9; border-radius: 10px;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div> -->
+            </div>
+            <div class="footer-contact">
+                <h3 class="contact-main-title">Hubungi Kami</h3>
+                <div class="contact-title-line"></div>
+                <!-- <p class="contact-subtitle">Contact Us</p> -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg class="contact-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                stroke="#2563eb" stroke-width="2" fill="none" />
+                            <polyline points="22,6 12,13 2,6" stroke="#2563eb" stroke-width="2" fill="none" />
+                        </svg>
+                        <a href="mailto:info@itkamilab.com?subject=Halo%20Tim%20Kamilab"
+                            class="contact-email-link">Email: info@itkamilab.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                stroke="#2563eb" stroke-width="2" fill="none" />
+                        </svg>
+                        <a href="https://wa.me/6285183050289" target="_blank" rel="noopener noreferrer"
+                            class="contact-phone-link">Phone/WhatsApp: +6285183050289</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#2563eb" stroke-width="2"
+                                fill="none" />
+                            <circle cx="12" cy="10" r="3" stroke="#2563eb" stroke-width="2" fill="none" />
+                        </svg>
+                        <span>Address: MTH Square, Jl. Letjen M.T. Haryono No.Kav 10 GF A4/A Jakarta Timur</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="9" stroke="#2563eb" stroke-width="2" />
+                            <path d="M12 7V12L15 15" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Waktu Kerja: Senin–Jumat, 09:00–18:00 WIB </br>
+                            <i>Hubungi kami kapan saja — kami akan balas segera.</i></span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="#2563eb" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Waktu Respons: dalam 1–3 jam (waktu kerja)</span>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <input type="text" id="contactName" name="name" placeholder="Nama" class="form-input" required>
+                    <input type="email" id="contactEmail" name="email" placeholder="Email" class="form-input" required>
+                    <textarea id="contactMessage" name="message" placeholder="Pesan" class="form-textarea" rows="4"
+                        required></textarea>
+                    <button type="submit" class="btn-submit">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="privacy-policy.html" class="nav-link">Kebijakan Privasi</a>
+            <p>&copy; 2024 KAMILAB. All rights reserved.</p>
+            <!-- <p>Didukung oleh <a href="index.html" style="color: #2563EB;">Kamilab</a></p> -->
+        </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

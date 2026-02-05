@@ -188,8 +188,8 @@
 (function () {
     'use strict';
 
-    // Skip navigation active state logic if on portfolio page
-    if (window.location.pathname.includes('portfolio.html')) {
+    // Skip navigation active state logic if on portfolio page or muda-konsultan page
+    if (window.location.pathname.includes('portfolio.html') || window.location.pathname.includes('muda-konsultan.html')) {
         return;
     }
 
@@ -516,7 +516,12 @@
             }
 
             // Format message for WhatsApp
-            const whatsappMessage = `Halo KamiLab Team, saya ${name}.\n\nEmail: ${email}\n\nPesan:\n${message}`;
+            let whatsappMessage = `Halo KamiLab Team, saya ${name}.\n\nEmail: ${email}\n\nPesan:\n${message}`;
+
+            // Add hardcoded text for Muda Konsultan page
+            if (window.location.pathname.includes('muda-konsultan.html')) {
+                whatsappMessage = `Halo KamiLab Team, saya ${name}.\n\nEmail: ${email}\n\nPesan:\nHallo kamilab keuangan, Saya ingin konsultasi mengenai keuangan & pajak\n\n${message}`;
+            }
 
             // Encode message for URL
             const encodedMessage = encodeURIComponent(whatsappMessage);

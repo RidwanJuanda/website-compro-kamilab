@@ -3551,3 +3551,363 @@ img.mobile-screen-1 {
         border-bottom: none;
     }
 }
+
+/* =========================================
+   Muda Konsultan Page Styles
+   ========================================= */
+
+/* General Utils for MK Page */
+.mk-btn-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.mk-btn-primary:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.mk-section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.mk-section-subtitle {
+    font-size: 16px;
+    color: #64748b;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.mk-section-desc {
+    font-size: 16px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.mk-center-header {
+    text-align: center;
+    max-width: auto;
+    height: auto;
+    margin: 0 auto 40px;
+}
+
+/* Hero Section */
+.mk-hero {
+    background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.mk-hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.mk-hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.mk-hero-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #1e3a8a;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.mk-hero-subtitle {
+    font-size: 18px;
+    color: #64748b;
+    margin-bottom: 32px;
+}
+
+.mk-hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.mk-img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+}
+
+/* Trusted By */
+.mk-trusted-by {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.mk-trusted-label {
+    font-size: 14px;
+    color: #94a3b8;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.mk-trusted-logos {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.mk-logo-placeholder {
+    font-weight: bold;
+    color: #cbd5e1;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* About Section */
+.mk-about {
+    background: #ffffff;
+    padding: 40px 0;
+}
+
+.mk-about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.mk-about-content {
+    flex: 1;
+}
+
+.mk-about-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mk-brand-icon {
+    display: block;
+    width: 320px;
+    height: 180px;
+    margin-bottom: 0px;
+}
+
+.mk-about-image {
+    flex: 1;
+}
+
+.mk-section-label {
+    font-size: 16px;
+    color: #2563eb;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Services Section */
+.mk-services {
+    background: #f8fafc;
+    padding: 80px 0;
+}
+
+.mk-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.mk-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.mk-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-color: #bfdbfe;
+}
+
+.mk-icon-box {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eff6ff;
+    border-radius: 12px;
+}
+
+.mk-icon {
+    width: 32px;
+    height: 32px;
+    color: #2563eb;
+}
+
+.mk-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.mk-card-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.5;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.mk-cta-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.mk-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.mk-feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.mk-badge-number {
+    min-width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #38BDF8, #2563eb);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Why Choose Us Section */
+.mk-why {
+    background: #ffffff;
+    padding: 80px 0;
+}
+
+.mk-card-row {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    padding: 24px;
+    gap: 16px;
+}
+
+.mk-icon-small {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: #eff6ff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-icon-xs {
+    width: 20px;
+    height: 20px;
+    color: #2563eb;
+}
+
+.mk-card-content {
+    flex: 1;
+}
+
+.mk-card-title-sm {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 6px;
+}
+
+.mk-card-desc-sm {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+/* Client & Portfolio Placeholder */
+.mk-clients {
+    background: #f8fafc;
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+
+    .mk-hero-container,
+    .mk-about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mk-hero-text,
+    .mk-about-content {
+        max-width: 100%;
+    }
+
+    .mk-hero-image img,
+    .mk-about-image img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .mk-trusted-logos {
+        justify-content: center;
+    }
+
+    .mk-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .mk-hero-title {
+        font-size: 32px;
+    }
+
+    .mk-grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
