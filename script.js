@@ -101,7 +101,7 @@
     function initMobileMenu() {
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const mainNav = document.getElementById('mainNav');
-        const navLinks = document.querySelectorAll('.nav-link');
+        const navLinks = document.querySelectorAll('.nav-link, .dropdown-link');
 
         if (!mobileMenuToggle || !mainNav) {
             // Retry after a short delay if elements not found
@@ -193,7 +193,7 @@
         return;
     }
 
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.nav-link, .dropdown-link');
 
     // Function to update active state based on current section
     function updateActiveNav() {

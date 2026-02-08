@@ -1111,6 +1111,67 @@ img.service-icon {
     font-size: 14px;
 }
 
+/* Dropdown Menu Styles */
+.nav-item-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown-arrow {
+    font-size: 10px;
+    transition: transform 0.3s;
+}
+
+.nav-item-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-link {
+    display: block;
+    padding: 10px 20px;
+    color: #333333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-link:hover,
+.dropdown-link.active {
+    background: #f1f5f9;
+    color: #2563eb;
+    font-weight: 400;
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
     .hero-content {
@@ -1211,6 +1272,39 @@ img.service-icon {
         padding: 15px 0;
         font-size: 16px;
         border-bottom: 1px solid #e0e0e0;
+    }
+
+    /* Mobile Dropdown Styles */
+    .nav-item-dropdown {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        padding: 0;
+        width: 100%;
+        background: transparent;
+        display: block;
+        /* Always show on mobile for now, or toggle with JS */
+    }
+
+    .dropdown-link {
+        padding: 10px 0 10px 20px;
+        /* Indent sub-items */
+        border-bottom: 1px solid #f0f0f0;
+        color: #666;
+    }
+
+    .dropdown-toggle .dropdown-arrow {
+        display: none;
+        /* Hide arrow on mobile or rotate if interactive */
     }
 }
 
