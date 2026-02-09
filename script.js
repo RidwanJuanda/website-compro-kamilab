@@ -189,7 +189,7 @@
     'use strict';
 
     // Skip navigation active state logic if on portfolio page or muda-konsultan page
-    if (window.location.pathname.includes('portfolio.html') || window.location.pathname.includes('muda-konsultan.html')) {
+    if (window.location.pathname.includes('portfolio.html') || window.location.pathname.includes('muda-konsultan.html') || window.location.pathname.includes('privacy-policy.html') || window.location.pathname.includes('blog.html') || window.location.pathname.includes('our-services.html')) {
         return;
     }
 

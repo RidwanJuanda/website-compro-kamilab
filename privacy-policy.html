@@ -18,6 +18,7 @@
     <link rel="canonical" href="https://itkamilab.com/privacy-policy.html">
 
     <!-- Basic Styling (optional, boleh disesuaikan) -->
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -28,7 +29,7 @@
             color: #0f172a;
         }
 
-        .container {
+        .policy-container {
             max-width: 900px;
             margin: 40px auto;
             background: #ffffff;
@@ -117,12 +118,35 @@
                 <a href="index.html" class="logo" style="text-decoration: none;">
                     <img src="images/ic-logo-dark-blue.png" alt="KAMILAB Icon" class="logo-icon-left">
                     <img src="images/ic-logo-text-dark-blue.png" alt="KAMILAB Logo" class="logo-icon">
+                    <!-- <div class="logo-text-container">
+                        <h2 class="logo-text">Kamilab</h2>
+                    </div> -->
                 </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu"
+                    onclick="toggleMobileMenu(event)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav" id="mainNav">
+                    <a href="index.html" class="nav-link">Beranda</a>
+                    <div class="nav-item-dropdown">
+                        <a href="" class="nav-link dropdown-toggle">Layanan Kami <span
+                                class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="our-services.html" class="dropdown-link">System Development</a>
+                            <a href="muda-konsultan.html" class="dropdown-link">Konsultan Keuangan</a>
+                        </div>
+                    </div>
+                    <a href="portfolio.html" class="nav-link">Portofolio</a>
+                    <a href="index.html#kontak" class="nav-link">Kontak Kami</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </nav>
             </div>
         </div>
     </header>
 
-    <div class="container">
+    <div class="policy-container">
         <h1>Privacy Policy</h1>
 
         <p>
@@ -131,7 +155,7 @@
             menyimpan, dan melindungi informasi yang Anda berikan saat menggunakan layanan dan website kami.
             Dengan mengakses website Kamilab, Anda menyetujui praktik yang dijelaskan dalam kebijakan ini.
             <!-- <a href="https://itkamilab.com">https://itkamilab.com</a>. -->
-        </p>
+        </p></br></br>
 
         <h2>1. Informasi yang Kami Kumpulkan</h2>
         <p>
@@ -142,7 +166,7 @@
             Form kontak, Email, WhatsApp, Konsultasi atau kerja sama proyek</br>
             Informasi otomatis:</br>
             Alamat IP, Jenis perangkat & browser, Halaman yang dikunjungi, Cookies & data analitik</br>
-        </p>
+        </p></br>
 
         <h2>2. Penggunaan Informasi</h2>
         <p>
@@ -153,7 +177,7 @@
             4. Analisis performa website</br>
             5. Keamanan dan pencegahan penyalahgunaan</br>
             Kami tidak menjual atau memperdagangkan data pribadi Anda kepada pihak ketiga.
-        </p>
+        </p></br>
 
         <h2>3. Penyimpanan & Keamanan Data</h2>
         <p>
@@ -162,7 +186,7 @@
             2. Akses terbatas pada data sensitif</br>
             3. Enkripsi dan perlindungan akses</br>
             Namun, tidak ada sistem digital yang 100% aman, sehingga kami tidak dapat menjamin keamanan mutlak.
-        </p>
+        </p></br>
         <h2>4. Cookies</h2>
         <p>
             Website kami dapat menggunakan cookies untuk:</br>
@@ -170,7 +194,7 @@
             2. Menyimpan preferensi</br>
             3. Analisis trafik website</br>
             Anda dapat menonaktifkan cookies melalui pengaturan browser Anda.
-        </p>
+        </p></br>
 
         <h2>5. Berbagi Informasi dengan Pihak Ketiga</h2>
         <p>
@@ -178,7 +202,7 @@
             1. Diperlukan untuk operasional layanan (hosting, analytics, dll)</br>
             2. Diminta oleh hukum atau peraturan</br>
             3. Dengan persetujuan Anda
-        </p>
+        </p></br>
 
         <h2>6. Hak Pengguna</h2>
         <p>
@@ -188,32 +212,33 @@
             3. Meminta penghapusan data</br>
             4. Menarik persetujuan penggunaan data</br>
             Silakan hubungi kami melalui kontak di bawah.
-        </p>
+        </p></br>
 
         <h2>7. Tautan Eksternal</h2>
         <p>
             Website kami mungkin mengandung tautan ke situs web pihak ketiga. Kami tidak memiliki kontrol atas
             kebijakan privasi atau praktik yang dijelaskan di situs web tersebut, jadi kami tidak dapat
             menjamin keamanan data yang Anda bagikan di situs web tersebut.
-        </p>
+        </p></br>
 
         <h2>8. Perubahan Kebijakan</h2>
         <p>
             Kamilab dapat memperbarui kebijakan privasi ini dari waktu ke waktu. Setiap perubahan akan
             ditampilkan di halaman ini.
-        </p>
+        </p></br>
 
         <h2>9. Kontak Kami</h2>
         <p>
             Jika Anda memiliki pertanyaan tentang kebijakan privasi ini, silakan hubungi kami melalui:
             <br>
             Email: <a href="mailto:info@itkamilab.com">info@itkamilab.com</a>
-        </p>
+        </p></br>
 
         <footer>
             &copy; 2024 Kamilab. All rights reserved.
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
