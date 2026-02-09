@@ -224,8 +224,35 @@ body {
     width: fit-content;
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
 .btn-primary:hover {
     background-color: #1d4ed8;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f9ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.1);
 }
 
 .hero-image {
@@ -4174,7 +4201,8 @@ img.mobile-screen-1 {
 /* Hero Section */
 .os-hero {
     padding: 100px 0 60px;
-    background: linear-gradient(180deg, #7BAAF5 0%, #ffffff 100%);
+    background: linear-gradient(135deg, #e0f2fe 0%, #7BAAF5 100%);
+    /* background: linear-gradient(180deg, #7BAAF5 0%, #ffffff 100%); */
     overflow: hidden;
     position: relative;
 }
@@ -4208,7 +4236,7 @@ img.mobile-screen-1 {
 .os-hero-title {
     font-size: 52px;
     font-weight: 800;
-    color: #0F172A;
+    color: #2563eb;
     margin-bottom: 24px;
     line-height: 1.1;
 }
@@ -4299,7 +4327,7 @@ img.mobile-screen-1 {
 .os-card-title {
     font-size: 22px;
     font-weight: 700;
-    color: #1e3a8a;
+    color: #0F172A;
     margin-bottom: 0;
 }
 
@@ -4311,7 +4339,7 @@ img.mobile-screen-1 {
 }
 
 .os-learn-more {
-    font-weight: 600;
+    font-weight: 400;
     color: #2563eb;
     text-decoration: none;
     display: inline-flex;
@@ -4329,12 +4357,13 @@ img.mobile-screen-1 {
 /* CTA Section */
 .os-cta {
     padding: 60px 0 100px;
-    background: #ffffff;
+    background: linear-gradient(135deg, #e0f2fe 0%, #7BAAF5 100%);
 }
 
 .os-cta-card {
-    background: linear-gradient(90deg, #FDFDFD 0%, #7BAAF5 100%);
-    border: 1px solid #EBF2FA;
+    background: #F9F7FD;
+    /* background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 100%); */
+    border: 1px solid #E2E8F0;
     border-radius: 30px;
     padding: 0;
     display: flex;
@@ -4385,15 +4414,17 @@ img.mobile-screen-1 {
 .os-cta-img {
     width: auto;
     height: 110%;
-    /* Make it stick out slightly if needed or just fill */
     max-height: 350px;
     object-fit: contain;
-    margin-bottom: -2px;
-    /* Anchor to bottom */
-    position: absolute;
-    bottom: 0;
-    right: 40px;
-    border-radius: 20px;
+    margin-bottom: -1px;
+    position: relative;
+    /* bottom: 0; */
+    /* right: 40px; */
+    right: -1px;
+    /* border-radius: 25px; */
+    /* border-bottom-right-radius: 25px; */
+    /* top-left | top-right | bottom-right | bottom-left */
+    border-radius: 0 10px 25px 0;
 }
 
 /* Responsive */
@@ -4458,5 +4489,81 @@ img.mobile-screen-1 {
 
     .os-cta-content {
         padding: 30px 20px 0 20px;
+    }
+}
+
+/* Vision Mission Section */
+.vision-mission {
+    padding: 80px 0;
+    /* Light Blue to White Gradient */
+    background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 100%);
+}
+
+.vm-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.vm-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vm-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+}
+
+.vm-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vm-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.vm-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e293b;
+    margin-bottom: 16px;
+}
+
+.vm-desc {
+    color: #64748b;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .vm-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .vm-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vm-card {
+        padding: 30px 20px;
     }
 }
