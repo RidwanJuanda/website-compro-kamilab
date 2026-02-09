@@ -85,6 +85,7 @@ body {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+    align-items: center;
     order: 3;
     position: relative;
     z-index: 1;
@@ -192,6 +193,20 @@ body {
     color: #666666;
     margin-bottom: 30px;
     line-height: 1.8;
+}
+
+.btn-contact-us {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
 }
 
 .btn-primary {
