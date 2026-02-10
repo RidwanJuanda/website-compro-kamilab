@@ -735,3 +735,27 @@
         initTimelineAnimations();
     }
 })();
+
+// PDF Download Tracking
+(function () {
+    'use strict';
+
+    const downloadBtn = document.getElementById('downloadProfileBtn');
+
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function () {
+            // Check if gtag is loaded
+            if (typeof gtag === 'function') {
+                gtag('event', 'download_company_profile', {
+                    'event_category': 'Engagement',
+                    'event_label': 'Company Profile PDF',
+                    'value': 1,
+                    'file_name': 'profile-perusahaan-kamilab.pdf'
+                });
+                console.log('GA4 Event Tracked: download_company_profile');
+            } else {
+                console.warn('Google Analytics (gtag) not loaded or blocked.');
+            }
+        });
+    }
+})();
