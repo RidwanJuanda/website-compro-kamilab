@@ -4567,3 +4567,24 @@ img.mobile-screen-1 {
         padding: 30px 20px;
     }
 }
+
+/* Kamilab Video Wrapper */
+.kamilab-video-wrapper {
+    background: linear-gradient(135deg, #7BAAF5 0%, #F9F7FD 100%);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px #475569;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid #7BAAF5;
+}
+
+.kamilab-video-wrapper video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
