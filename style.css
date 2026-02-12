@@ -285,125 +285,7 @@ body {
     position: relative;
 }
 
-.hero-illustration {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-    border-radius: 20px;
-    padding: 40px;
-}
 
-.illustration-person {
-    position: absolute;
-}
-
-.person-1 {
-    bottom: 40px;
-    left: 60px;
-}
-
-.person-2 {
-    bottom: 40px;
-    right: 60px;
-}
-
-.person-head {
-    width: 50px;
-    height: 50px;
-    background: #2563eb;
-    border-radius: 50%;
-    margin: 0 auto 10px;
-}
-
-.person-body {
-    width: 80px;
-    height: 100px;
-    background: #2563eb;
-    border-radius: 10px;
-    margin: 0 auto;
-}
-
-.laptop {
-    width: 60px;
-    height: 40px;
-    background: #ffffff;
-    border-radius: 5px;
-    margin: 10px auto 0;
-    position: relative;
-}
-
-.laptop::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70px;
-    height: 5px;
-    background: #2563eb;
-    border-radius: 5px 5px 0 0;
-}
-
-.cup {
-    width: 30px;
-    height: 40px;
-    background: #ffffff;
-    border-radius: 0 0 15px 15px;
-    margin: 10px auto 0;
-    position: relative;
-}
-
-.cup::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 20px;
-    height: 20px;
-    border: 3px solid #2563eb;
-    border-left: none;
-    border-radius: 0 20px 20px 0;
-}
-
-.illustration-icon {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: #ffffff;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.icon-gear {
-    top: 20px;
-    left: 20px;
-}
-
-.icon-code {
-    top: 20px;
-    right: 20px;
-}
-
-.icon-chart {
-    top: 80px;
-    left: 20px;
-}
-
-.icon-doc {
-    top: 80px;
-    right: 20px;
-}
-
-.icon-chat {
-    top: 140px;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
 /* Services Overview Section */
 .services-overview {
@@ -606,106 +488,7 @@ img.service-icon {
     border-radius: 0;
 }
 
-.portfolio-illustration {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
 
-.illustration-screen {
-    width: 100%;
-    height: 80%;
-    background: #ffffff;
-    border-radius: 8px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.screen-content {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
-    border-radius: 8px;
-}
-
-.illustration-person-small {
-    width: 40px;
-    height: 60px;
-    background: #2563eb;
-    border-radius: 20px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.illustration-tablet {
-    width: 80%;
-    height: 70%;
-    background: #ffffff;
-    border-radius: 12px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.tablet-content {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
-    border-radius: 12px;
-}
-
-.illustration-hand {
-    width: 60px;
-    height: 80px;
-    background: #ffffff;
-    border-radius: 30px;
-    position: absolute;
-    bottom: -20px;
-    right: 20px;
-}
-
-.illustration-phone {
-    width: 50%;
-    height: 80%;
-    background: #ffffff;
-    border-radius: 20px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.phone-content {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
-    border-radius: 20px;
-}
-
-.illustration-hand-phone {
-    width: 50px;
-    height: 70px;
-    background: #ffffff;
-    border-radius: 25px;
-    position: absolute;
-    bottom: -10px;
-    left: 20px;
-}
-
-.illustration-monitor {
-    width: 90%;
-    height: 70%;
-    background: #ffffff;
-    border-radius: 8px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.monitor-content {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
-    border-radius: 8px;
-}
 
 .portfolio-label {
     padding: 20px;
@@ -917,18 +700,7 @@ img.service-icon {
     margin-bottom: 20px;
 }
 
-.footer-title {
-    font-size: 24px;
-    color: #2563eb;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
 
-.footer-subtitle {
-    font-size: 18px;
-    color: #666666;
-    margin-bottom: 20px;
-}
 
 .footer-about {
     background: linear-gradient(to bottom, #ffffff 0%, #e0f2fe 40%, #bfdbfe 100%);
@@ -981,12 +753,7 @@ img.service-icon {
     text-align: justify;
 }
 
-.footer-description {
-    font-size: 14px;
-    color: #666666;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
+
 
 .btn-read-more {
     background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
@@ -1351,23 +1118,7 @@ img.service-icon {
 }
 
 /* Portfolio Page Styles */
-.btn-konsultasi {
-    background: #2563eb;
-    color: #ffffff;
-    border: none;
-    padding: 12px 24px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background 0.3s;
-    text-decoration: none;
-    display: inline-block;
-}
 
-.btn-konsultasi:hover {
-    background: #1d4ed8;
-}
 
 /* Portfolio Hero Section */
 .portfolio-hero {
@@ -3695,6 +3446,9 @@ img.mobile-screen-1 {
    ========================================= */
 
 /* General Utils for MK Page */
+
+
+/* General Utils for MK Page */
 .mk-btn-primary {
     background-color: #2563eb;
     color: #ffffff;
@@ -4174,29 +3928,7 @@ img.mobile-screen-1 {
    ========================================= */
 
 /* Custom Button for OS Page */
-.os-btn {
-    background: #3b82f6;
-    /* Equivalent to blue-500 */
-    color: #ffffff;
-    border: none;
-    padding: 14px 28px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 50px;
-    /* Pill shape */
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.5);
-}
 
-.os-btn:hover {
-    background: #2563eb;
-    /* Darker blue on hover */
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.5);
-}
 
 /* Hero Section */
 .os-hero {
@@ -4256,18 +3988,7 @@ img.mobile-screen-1 {
     position: relative;
 }
 
-.os-hero-illustration-wrapper {
-    position: relative;
-    z-index: 2;
-    max-width: 100%;
-}
 
-.os-illustration-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    filter: drop-shadow(0 20px 40px rgba(37, 99, 235, 0.1));
-}
 
 /* Services Grid */
 .os-services {
