@@ -440,7 +440,7 @@ img.service-icon {
 /* Portfolio Section */
 .portfolio {
     background: #f8fafc;
-    padding: 80px 0;
+    padding: 80px 0 20px;
 }
 
 .portfolio-grid {
@@ -3302,7 +3302,7 @@ img.mobile-screen-1 {
 .why-choose-us {
     background: #F8FAFC;
     /* background: linear-gradient(135deg, #e0f2fe 0%, #F8FAFC 100%); */
-    padding: 80px 0;
+    padding: 20px 0 50px;
 }
 
 .why-subtitle {
