@@ -4456,18 +4456,22 @@ img.mobile-screen-1 {
 
 /* Responsive */
 @media (max-width: 992px) {
-    .product-card-crm {
+
+    .product-card-crm,
+    .product-card-iot {
         grid-template-columns: 1fr;
     }
 
-    .product-image-wrapper {
+    .product-image-wrapper,
+    .product-image-wrapper-iot {
         order: -1;
         /* Image top on mobile if desired, or keep bottom */
         padding: 30px;
         min-height: 300px;
     }
 
-    .product-content {
+    .product-content,
+    .product-content-iot {
         padding: 40px 30px;
     }
 }
