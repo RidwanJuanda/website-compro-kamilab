@@ -700,8 +700,6 @@ img.service-icon {
     margin-bottom: 20px;
 }
 
-
-
 .footer-about {
     background: linear-gradient(to bottom, #ffffff 0%, #e0f2fe 40%, #bfdbfe 100%);
     padding: 40px;
@@ -4308,4 +4306,183 @@ img.mobile-screen-1 {
     border-radius: 12px;
     display: block;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Products Section */
+.products-section {
+    padding: 80px 0;
+    background: #eef2ff;
+    /* Light indigo/blue background */
+}
+
+.products-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.text-highlight {
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.products-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Common Card Styles */
+.product-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.product-card-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.product-card-desc {
+    font-size: 16px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.btn-product {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background: #3b82f6;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    gap: 8px;
+}
+
+.btn-product:hover {
+    background: #2563eb;
+}
+
+.btn-product .arrow {
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* Card 1: CRM (Horizontal Layout on Desktop) */
+.product-card-crm {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    padding: 0;
+}
+
+.product-content {
+    padding: 50px;
+    z-index: 2;
+}
+
+.product-image-wrapper {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 350px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+}
+
+/* Card 2: IoT (Vertical Layout / Stacked) */
+.product-card-iot {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    padding: 0;
+}
+
+.product-content-iot {
+    z-index: 2;
+    padding: 50px;
+}
+
+.product-text-iot .product-card-title {
+    margin-bottom: 12px;
+}
+
+.product-image-wrapper-iot {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.product-img-iot {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .product-card-crm {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image-wrapper {
+        order: -1;
+        /* Image top on mobile if desired, or keep bottom */
+        padding: 30px;
+        min-height: 300px;
+    }
+
+    .product-content {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .products-header {
+        text-align: left;
+    }
+
+    .product-card-crm .product-content,
+    .product-card-iot {
+        padding: 30px 24px;
+    }
+
+    .product-image-wrapper {
+        padding: 20px;
+    }
 }
