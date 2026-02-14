@@ -748,7 +748,8 @@
             if (typeof gtag === 'function') {
                 gtag('event', 'download_company_profile', {
                     'event_category': 'Engagement',
-                    'event_label': 'Company Profile PDF',
+                    'event_label': 'Unduh Profile Perusahaan',
+                    'link_text': 'Unduh Profile Perusahaan',
                     'value': 1,
                     'file_name': 'profile-perusahaan-kamilab.pdf'
                 });
