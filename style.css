@@ -4308,6 +4308,38 @@ img.mobile-screen-1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
+.kamilab-video-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 68px;
+    height: 68px;
+    background-color: rgba(33, 33, 33, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.kamilab-video-play-btn::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 0 12px 20px;
+    border-color: transparent transparent transparent #ffffff;
+    margin-left: 4px;
+}
+
+.kamilab-video-wrapper a:hover .kamilab-video-play-btn {
+    background-color: #ff0000;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
 /* Products Section */
 .products-section {
     padding: 80px 0;
