@@ -2690,16 +2690,65 @@ img.mobile-screen-1 {
 @media (max-width: 992px) {
     .process-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
     }
 }
 
-@media (max-width: 576px) {
-    .process-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 768px) {
+    .section-title {
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .dev-process-title {
+    .section-title-line {
+        display: none;
+    }
+
+    .section-title-text {
+        white-space: normal;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .dev-process {
+        padding: 60px 0;
+    }
+
+    .dev-process-subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+        padding: 0 15px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .process-card {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title-text {
         font-size: 24px;
+    }
+
+    .dev-process {
+        padding: 40px 0;
+    }
+
+    .dev-process-subtitle {
+        font-size: 15px;
+    }
+
+    .process-title {
+        font-size: 18px;
+    }
+
+    .process-desc {
+        font-size: 14px;
     }
 }
 
