@@ -760,3 +760,26 @@
         });
     }
 })();
+
+// Promo Banner Click Tracking
+(function () {
+    'use strict';
+
+    const promoLink = document.getElementById('promoBannerLink');
+
+    if (promoLink) {
+        promoLink.addEventListener('click', function () {
+            // Check if gtag is loaded
+            if (typeof gtag === 'function') {
+                gtag('event', 'click_promo_banner', {
+                    'event_category': 'Engagement',
+                    'event_label': 'Klik Promo Banner',
+                    'link_url': this.href
+                });
+                console.log('GA4 Event Tracked: click_promo_banner');
+            } else {
+                console.warn('Google Analytics (gtag) not loaded or blocked.');
+            }
+        });
+    }
+})();
