@@ -765,18 +765,18 @@
 (function () {
     'use strict';
 
-    const promoLink = document.getElementById('promoBannerLink');
+    const promoLink = document.getElementById('promoCRMLink');
 
     if (promoLink) {
         promoLink.addEventListener('click', function () {
             // Check if gtag is loaded
             if (typeof gtag === 'function') {
-                gtag('event', 'click_promo_banner', {
+                gtag('event', 'click_crm_demo', {
                     'event_category': 'Engagement',
-                    'event_label': 'Klik Promo Banner',
+                    'event_label': 'Klik Demo CRM',
                     'link_url': this.href
                 });
-                console.log('GA4 Event Tracked: click_promo_banner');
+                console.log('GA4 Event Tracked: click_crm_demo');
             } else {
                 console.warn('Google Analytics (gtag) not loaded or blocked.');
             }
