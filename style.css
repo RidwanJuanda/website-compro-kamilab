@@ -1351,7 +1351,7 @@ img.service-icon {
     color: #64748b;
     text-align: center;
     font-style: bold;
-    margin-top: -30px;
+    margin-top: 30px;
     margin-bottom: 40px;
     line-height: 1.6;
 }
