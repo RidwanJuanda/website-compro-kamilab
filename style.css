@@ -5062,7 +5062,7 @@ img.mobile-screen-1 {
         padding-left: 30px;
     }
 
-    .cv-info-value span:first-child {
+    .cv-info-value>span:first-child {
         display: none;
     }
 
