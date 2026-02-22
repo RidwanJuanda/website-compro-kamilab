@@ -751,7 +751,13 @@ img.service-icon {
     text-align: justify;
 }
 
-
+.about-subtitle {
+    font-size: 18px;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+}
 
 .btn-read-more {
     background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
