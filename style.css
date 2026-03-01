@@ -1533,9 +1533,9 @@ img.service-icon {
 
 img.mobile-screen-3 {
     width: 120px;
-    height: 240px;
+    height: 260px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: block;
     background: none;
@@ -1543,19 +1543,19 @@ img.mobile-screen-3 {
 
 img.mobile-screen-2 {
     width: 120px;
-    height: 220px;
+    height: 240px;
     object-fit: cover;
     background: transparent;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
 img.mobile-screen-1 {
     width: 120px;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: block;
     background: none;
