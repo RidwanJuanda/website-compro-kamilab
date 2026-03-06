@@ -2457,18 +2457,20 @@ img.mobile-screen-1 {
 
 .clients-grid {
     /* Removed for Marquee */
-    display: none;
+    display: flex;
 }
 
 .clients-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    justify-content: center;
     margin-top: 40px;
 }
 
 .clients-footer {
     display: flex;
+    gap: 20px;
     justify-content: center;
     margin-top: 20px;
 }
