@@ -2460,83 +2460,86 @@ img.mobile-screen-1 {
     display: none;
 }
 
-.clients-marquee {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     margin-top: 40px;
-    padding: 10px 0;
-    /* optional fade masks */
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
-.clients-track {
+.clients-footer {
     display: flex;
-    /* gap: 30px; */
-    /* Removed to ensure precise infinite scroll math */
-    width: max-content;
-    animation: scroll-left 30s linear infinite;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .client-card {
     background: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    height: 80px;
+    border-radius: 20px;
+    padding: 24px;
+    min-height: 100px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e8f0;
-    flex-shrink: 0;
-    min-width: auto;
-    margin-right: 20px;
-    /* Using margin instead of gap for seamless loop */
-    /* Ensure cards have width in single line */
+    gap: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(226, 232, 240, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Pause animation on hover */
-.clients-marquee:hover .clients-track {
-    animation-play-state: paused;
+.client-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.1);
 }
-
-@keyframes scroll-left {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-25%);
-        /* Move 1 set out of 4 */
-    }
-}
-
 
 .client-icon {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
+    width: 50px;
+    height: 50px;
     border-radius: 10px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .client-name {
-    font-size: 16px;
-    font-weight: 600;
-    color: #334155;
-    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e3a8a;
+    line-height: 1.3;
 }
 
-/* Responsive adjustment if needed, but marquee usually handles it well */
-@media (max-width: 768px) {
-    .clients-section {
-        padding: 40px 0;
+.kamilab-card {
+    padding: 20px 40px;
+    min-width: 300px;
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.client-logo-text {
+    height: 35px;
+    object-fit: contain;
+}
+
+/* Responsive adjustment */
+@media (max-width: 1200px) {
+    .clients-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .clients-grid {
+        grid-template-columns: 1fr;
     }
 
-    .client-card {
-        padding: 10px 20px;
-        min-width: 180px;
+    .kamilab-card {
+        min-width: 100%;
+        padding: 20px;
     }
 }
 
