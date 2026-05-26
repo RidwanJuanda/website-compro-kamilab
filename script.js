@@ -786,3 +786,27 @@
         });
     }
 })();
+
+// Clients Show More Toggle
+(function () {
+    'use strict';
+
+    function initClientsShowMore() {
+        const btn = document.getElementById('clientsShowMoreBtn');
+        const grid = document.getElementById('clientsGrid');
+
+        if (!btn || !grid) return;
+
+        btn.addEventListener('click', function () {
+            grid.classList.remove('collapsed');
+            btn.parentElement.style.display = 'none';
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initClientsShowMore);
+    } else {
+        initClientsShowMore();
+    }
+})();
+
