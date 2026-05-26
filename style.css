@@ -2457,14 +2457,14 @@ img.mobile-screen-1 {
 
 .clients-grid {
     /* Removed for Marquee */
-    display: flex;
+    display: block;
 }
 
 .clients-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    justify-content: center;
+    gap: 10px;
+    justify-content: start;
     margin-top: 40px;
 }
 
@@ -2482,7 +2482,7 @@ img.mobile-screen-1 {
     min-height: 80px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     gap: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     border: 1px solid rgba(226, 232, 240, 0.5);
@@ -2513,7 +2513,7 @@ img.mobile-screen-1 {
 .client-card a {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     gap: 10px;
     text-decoration: none;
     width: 100%;
