@@ -285,6 +285,164 @@ body {
     position: relative;
 }
 
+/* Video Logo Overlay Watermark */
+.video-logo-overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    height: 30px;
+    width: auto;
+    z-index: 10;
+    pointer-events: none;
+    /* Allows clicks to pass through to the iframe below */
+    opacity: 1;
+    /* Fully opaque to completely cover the text underneath */
+    border-radius: 6px;
+    /* Smooth rounded corners matching the logo border */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.hero-banner-image:hover .video-logo-overlay {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .video-logo-overlay {
+        bottom: 5px;
+        right: 5px;
+        height: 25px;
+        border-radius: 4px;
+    }
+}
+
+/* Container Fullscreen Styles & Overrides */
+.hero-banner-image:fullscreen {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    border-radius: 0 !important;
+    background: #000 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.hero-banner-image:fullscreen iframe {
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.hero-banner-image:fullscreen .video-logo-overlay {
+    bottom: 30px !important;
+    right: 25px !important;
+    height: 65px !important;
+    width: 300px !important;
+    border-radius: 12px !important;
+}
+
+.hero-banner-image:fullscreen .custom-fullscreen-btn {
+    top: 30px !important;
+    right: 30px !important;
+    width: 48px !important;
+    height: 48px !important;
+    opacity: 1 !important;
+}
+
+.hero-banner-image:fullscreen .custom-fullscreen-btn svg {
+    width: 24px !important;
+    height: 24px !important;
+}
+
+/* webkit (Safari/Chrome iOS) prefixed fullscreen styles */
+.hero-banner-image:-webkit-full-screen {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    border-radius: 0 !important;
+    background: #000 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.hero-banner-image:-webkit-full-screen iframe {
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.hero-banner-image:-webkit-full-screen .video-logo-overlay {
+    bottom: 38px !important;
+    right: 25px !important;
+    height: 65px !important;
+    width: 250px !important;
+    border-radius: 12px !important;
+}
+
+.hero-banner-image:-webkit-full-screen .custom-fullscreen-btn {
+    top: 30px !important;
+    right: 30px !important;
+    width: 48px !important;
+    height: 48px !important;
+    opacity: 1 !important;
+}
+
+.hero-banner-image:-webkit-full-screen .custom-fullscreen-btn svg {
+    width: 24px !important;
+    height: 24px !important;
+}
+
+/* Custom Fullscreen Button */
+.custom-fullscreen-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    pointer-events: auto;
+    /* Clickable */
+    transition: background 0.3s, transform 0.2s, opacity 0.3s ease;
+    opacity: 0;
+    /* Hidden by default, shows on hover */
+}
+
+.hero-banner-image:hover .custom-fullscreen-btn {
+    opacity: 1;
+}
+
+.custom-fullscreen-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.custom-fullscreen-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+@media (max-width: 1024px) {
+    .custom-fullscreen-btn {
+        display: none !important;
+    }
+}
+
 
 
 /* Services Overview Section */
