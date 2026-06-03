@@ -382,9 +382,9 @@ body {
 .hero-banner-image:-webkit-full-screen .video-logo-overlay {
     bottom: 38px !important;
     right: 25px !important;
-    height: 65px !important;
-    width: 250px !important;
-    border-radius: 12px !important;
+    height: auto;
+    width: auto;
+    border-radius: 15px !important;
 }
 
 .hero-banner-image:-webkit-full-screen .custom-fullscreen-btn {
