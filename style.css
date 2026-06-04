@@ -5631,3 +5631,363 @@ img.mobile-screen-1 {
         align-items: flex-start;
     }
 }
+
+/* ==========================================
+   VIDEO DEMO GRID & CARD STYLES
+   ========================================== */
+.vd-section {
+    background-color: #F8FAFC;
+    padding: 80px 0;
+}
+
+.vd-hero {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+.vd-tag {
+    display: inline-block;
+    background-color: #E0F2FE;
+    color: #2563EB;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.vd-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0F172A;
+    margin-bottom: 16px;
+    line-height: 1.25;
+}
+
+.vd-description {
+    font-size: 18px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+.vd-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 20px 0;
+}
+
+.vd-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03), 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.vd-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.vd-thumbnail-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background-color: #0F172A;
+    cursor: pointer;
+}
+
+.vd-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.vd-card:hover .vd-thumbnail {
+    transform: scale(1.05);
+}
+
+.vd-play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.vd-card:hover .vd-play-overlay {
+    background: rgba(15, 23, 42, 0.4);
+}
+
+.vd-play-btn {
+    width: 56px;
+    height: 56px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+}
+
+.vd-play-btn::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 14px;
+    border-color: transparent transparent transparent #0F172A;
+    margin-left: 4px;
+}
+
+.vd-card:hover .vd-play-btn {
+    transform: scale(1.12);
+    background: #38BDF8;
+}
+
+.vd-card:hover .vd-play-btn::after {
+    border-color: transparent transparent transparent #FFFFFF;
+}
+
+.vd-duration {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(4px);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+.vd-card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.vd-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    transition: color 0.2s ease;
+}
+
+.vd-card:hover .vd-card-title {
+    color: #0EA5E9;
+}
+
+.vd-card-desc {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    max-height: calc(1.5em * 5);
+    overflow: hidden;
+}
+
+.vd-card-footer {
+    margin-top: auto;
+}
+
+.vd-category-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 50px;
+    text-transform: capitalize;
+}
+
+/* Category Specific Color Variations */
+.vd-tag-dashboard {
+    background-color: #E0F2FE;
+    color: #0284C7;
+}
+
+.vd-tag-mobile-app {
+    background-color: #F0FDF4;
+    color: #16A34A;
+}
+
+.vd-tag-website {
+    background-color: #EEF2FF;
+    color: #4F46E5;
+}
+
+.vd-tag-sistem-informasi {
+    background-color: #FAF5FF;
+    color: #9333EA;
+}
+
+.vd-tag-enterprise {
+    background-color: #FFF7ED;
+    color: #EA580C;
+}
+
+/* Video Lightbox Modal Styles */
+.vd-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.vd-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.vd-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+.vd-modal-container {
+    position: relative;
+    width: 90%;
+    max-width: 960px;
+    aspect-ratio: 16/9;
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    z-index: 10000;
+}
+
+.vd-modal.active .vd-modal-container {
+    transform: scale(1);
+}
+
+.vd-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    border: none;
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: background 0.3s, transform 0.2s, color 0.2s;
+    z-index: 10200;
+}
+
+.vd-modal-close:hover {
+    background: rgba(15, 23, 42, 0.9);
+    transform: scale(1.1);
+    color: #38BDF8;
+}
+
+.vd-player-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.vd-player-wrapper iframe,
+.vd-player-wrapper video {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* Responsiveness for Grid */
+@media (max-width: 1024px) {
+    .vd-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .vd-title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .vd-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .vd-section {
+        padding: 50px 0;
+    }
+
+    .vd-title {
+        font-size: 24px;
+    }
+
+    .vd-modal-close {
+        top: 10px;
+        right: 10px;
+        background: rgba(15, 23, 42, 0.6);
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+    }
+}
+
+.vd-modal-container .video-logo-overlay {
+    z-index: 10100;
+    bottom: 15px;
+    right: 18px;
+    height: auto;
+    width: 180px;
+    background-color: #FFFFFF;
+    /* Matches the background of logo-kamilab.jpeg if needed */
+    padding: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
