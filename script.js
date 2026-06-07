@@ -430,7 +430,7 @@
     }
 
     // Function to start auto-play
-    function startBannerSlider() {
+    window.startBannerSlider = function() {
         // Clear any existing interval
         if (bannerInterval) {
             clearInterval(bannerInterval);
@@ -440,7 +440,7 @@
     }
 
     // Function to stop auto-play
-    function stopBannerSlider() {
+    window.stopBannerSlider = function() {
         if (bannerInterval) {
             clearInterval(bannerInterval);
             bannerInterval = null;
@@ -458,13 +458,19 @@
         showBannerImage(0);
 
         // Start auto-play
-        startBannerSlider();
+        window.startBannerSlider();
 
         // Pause slider on hover
         const heroImage = document.querySelector('.hero-image');
         if (heroImage) {
-            heroImage.addEventListener('mouseenter', stopBannerSlider);
-            heroImage.addEventListener('mouseleave', startBannerSlider);
+            heroImage.addEventListener('mouseenter', window.stopBannerSlider);
+            heroImage.addEventListener('mouseleave', function() {
+                // Only resume if video is not playing
+                const iframe = document.getElementById('heroVideo');
+                if (!iframe || iframe.style.display === 'none') {
+                    window.startBannerSlider();
+                }
+            });
         }
     }
 
@@ -862,6 +868,43 @@
 
     document.addEventListener('fullscreenchange', updateFullscreenButtonState);
     document.addEventListener('webkitfullscreenchange', updateFullscreenButtonState);
+})();
+
+// Hero Video Play Logic
+(function () {
+    'use strict';
+
+    window.playVideo = function () {
+        const iframe = document.getElementById('heroVideo');
+        const thumbnail = document.querySelector('.hero-banner-image.active .vd-thumbnail');
+        const overlay = document.querySelector('.hero-banner-image.active .vd-play-overlay');
+        const container = document.querySelector('.hero-banner-image.active');
+
+        if (iframe && thumbnail && overlay) {
+            // Stop the banner slider
+            if (window.stopBannerSlider) {
+                window.stopBannerSlider();
+            }
+
+            // Add autoplay parameter to Synthesia URL if not present
+            let src = iframe.src;
+            if (!src.includes('autoplay=1')) {
+                src += src.includes('?') ? '&autoplay=1' : '?autoplay=1';
+                iframe.src = src;
+            }
+
+            // Show iframe, hide thumbnail and overlay
+            iframe.style.display = 'block';
+            thumbnail.style.display = 'none';
+            overlay.style.display = 'none';
+            
+            // Remove cursor pointer and click event from container once playing
+            if (container) {
+                container.style.cursor = 'default';
+                container.onclick = null;
+            }
+        }
+    };
 })();
 
 

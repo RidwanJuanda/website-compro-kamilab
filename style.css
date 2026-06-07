@@ -2687,7 +2687,7 @@ img.mobile-screen-1 {
     min-height: 80px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     gap: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     border: 1px solid rgba(226, 232, 240, 0.5);
@@ -5713,7 +5713,8 @@ img.mobile-screen-1 {
     transition: transform 0.5s ease;
 }
 
-.vd-card:hover .vd-thumbnail {
+.vd-card:hover .vd-thumbnail,
+.hero-banner-image:hover .vd-thumbnail {
     transform: scale(1.05);
 }
 
@@ -5730,7 +5731,8 @@ img.mobile-screen-1 {
     transition: background-color 0.3s ease;
 }
 
-.vd-card:hover .vd-play-overlay {
+.vd-card:hover .vd-play-overlay,
+.hero-banner-image:hover .vd-play-overlay {
     background: rgba(15, 23, 42, 0.4);
 }
 
@@ -5757,12 +5759,14 @@ img.mobile-screen-1 {
     margin-left: 4px;
 }
 
-.vd-card:hover .vd-play-btn {
+.vd-card:hover .vd-play-btn,
+.hero-banner-image:hover .vd-play-btn {
     transform: scale(1.12);
     background: #38BDF8;
 }
 
-.vd-card:hover .vd-play-btn::after {
+.vd-card:hover .vd-play-btn::after,
+.hero-banner-image:hover .vd-play-btn::after {
     border-color: transparent transparent transparent #FFFFFF;
 }
 
