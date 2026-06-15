@@ -85,8 +85,40 @@
     } else {
         // DOM is already ready
         initSlider();
+        initFAQ();
     }
 })();
+
+function initFAQ() {
+
+    const faqButtons = document.querySelectorAll('.faq-question');
+
+    // Jika tidak ada FAQ di halaman ini, skip
+    if (faqButtons.length === 0) {
+        return;
+    }
+
+    faqButtons.forEach(btn => {
+
+        btn.addEventListener('click', () => {
+
+            const item = btn.parentElement;
+
+            document.querySelectorAll('.faq-item').forEach(faq => {
+
+                if (faq !== item) {
+                    faq.classList.remove('active');
+                }
+
+            });
+
+            item.classList.toggle('active');
+
+        });
+
+    });
+
+}
 
 // Mobile Menu Toggle
 (function () {
@@ -192,7 +224,7 @@
     if (window.location.pathname.includes('portfolio.html') || window.location.pathname.includes('muda-konsultan.html')
         || window.location.pathname.includes('privacy-policy.html') || window.location.pathname.includes('blog.html')
         || window.location.pathname.includes('our-products.html') || window.location.pathname.includes('our-services.html')
-        || window.location.pathname.includes('digital-content.html')) {
+        || window.location.pathname.includes('digital-content.html') || window.location.pathname.includes('faq.html')) {
         return;
     }
 
@@ -430,7 +462,7 @@
     }
 
     // Function to start auto-play
-    window.startBannerSlider = function() {
+    window.startBannerSlider = function () {
         // Clear any existing interval
         if (bannerInterval) {
             clearInterval(bannerInterval);
@@ -440,7 +472,7 @@
     }
 
     // Function to stop auto-play
-    window.stopBannerSlider = function() {
+    window.stopBannerSlider = function () {
         if (bannerInterval) {
             clearInterval(bannerInterval);
             bannerInterval = null;
@@ -464,7 +496,7 @@
         const heroImage = document.querySelector('.hero-image');
         if (heroImage) {
             heroImage.addEventListener('mouseenter', window.stopBannerSlider);
-            heroImage.addEventListener('mouseleave', function() {
+            heroImage.addEventListener('mouseleave', function () {
                 // Only resume if video is not playing
                 const iframe = document.getElementById('heroVideo');
                 if (!iframe || iframe.style.display === 'none') {
@@ -848,7 +880,7 @@
         if (!btn) return;
 
         const isFullscreen = document.fullscreenElement || document.webkitFullscreenElement;
-        
+
         if (isFullscreen) {
             btn.innerHTML = `
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -897,7 +929,7 @@
             iframe.style.display = 'block';
             thumbnail.style.display = 'none';
             overlay.style.display = 'none';
-            
+
             // Remove cursor pointer and click event from container once playing
             if (container) {
                 container.style.cursor = 'default';
