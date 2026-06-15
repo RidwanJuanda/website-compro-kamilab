@@ -6074,7 +6074,7 @@ img.mobile-screen-1 {
 
 .testimonial-section {
     padding: 100px 0;
-    background: #FFFFFF;
+    background: #F8FAFC;
 }
 
 .section-badge {
@@ -6116,7 +6116,8 @@ img.mobile-screen-1 {
 
 .testimonial-grid {
     display: flex;
-    gap: 24px;
+    gap: 14px;
+    background: #F8FAFC;
     width: max-content;
     animation: scroll-testimonial 30s linear infinite;
 }
