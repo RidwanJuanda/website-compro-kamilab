@@ -939,4 +939,27 @@ function initFAQ() {
     };
 })();
 
+// Loading Screen Logic
+(function () {
+    'use strict';
+
+    function hideLoadingScreen() {
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+            loadingOverlay.classList.add('hidden');
+        }
+    }
+
+    // Hide loading screen when page is fully loaded
+    if (document.readyState === 'loading') {
+        window.addEventListener('load', function () {
+            // Add a small delay to make it smoother
+            setTimeout(hideLoadingScreen, 800);
+        });
+    } else {
+        // Page already loaded
+        setTimeout(hideLoadingScreen, 800);
+    }
+})();
+
 
