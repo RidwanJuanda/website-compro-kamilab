@@ -943,23 +943,38 @@ function initFAQ() {
 (function () {
     'use strict';
 
+    let isLoadingHidden = false;
+
     function hideLoadingScreen() {
+        if (isLoadingHidden) return;
+        isLoadingHidden = true;
+        
         const loadingOverlay = document.getElementById('loadingOverlay');
         if (loadingOverlay) {
             loadingOverlay.classList.add('hidden');
         }
     }
 
-    // Hide loading screen when page is fully loaded
-    if (document.readyState === 'loading') {
+    function initLoading() {
+        // DOMContentLoaded (lebih cepat dari load)
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function () {
+                setTimeout(hideLoadingScreen, 300);
+            });
+        } else {
+            setTimeout(hideLoadingScreen, 300);
+        }
+
+        // Load event (semua resource selesai dimuat)
         window.addEventListener('load', function () {
-            // Add a small delay to make it smoother
-            setTimeout(hideLoadingScreen, 800);
+            setTimeout(hideLoadingScreen, 100);
         });
-    } else {
-        // Page already loaded
-        setTimeout(hideLoadingScreen, 800);
+
+        // Fallback timeout maksimal 3 detik (untuk menghindari stuck loading)
+        setTimeout(hideLoadingScreen, 3000);
     }
+
+    initLoading();
 })();
 
 
