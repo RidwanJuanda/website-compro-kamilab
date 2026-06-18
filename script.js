@@ -223,7 +223,7 @@ function initFAQ() {
     // Skip navigation active state logic if on portfolio page or muda-konsultan page
     if (window.location.pathname.includes('portfolio.html') || window.location.pathname.includes('muda-konsultan.html')
         || window.location.pathname.includes('privacy-policy.html') || window.location.pathname.includes('blog.html')
-        || window.location.pathname.includes('our-products.html') || window.location.pathname.includes('our-services.html')
+        || window.location.pathname.includes('our-products.html') || window.location.pathname.includes('jasa-pembuatan-aplikasi-dan-sistem-custom.html')
         || window.location.pathname.includes('digital-content.html') || window.location.pathname.includes('faq.html')) {
         return;
     }

@@ -894,6 +894,7 @@ img.service-icon {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+    margin-top: 40px;
     margin-bottom: 40px;
 }
 
@@ -901,6 +902,7 @@ img.service-icon {
     background: #e0f2fe;
     padding: 40px;
     border-radius: 12px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
@@ -908,6 +910,7 @@ img.service-icon {
     background: linear-gradient(to bottom, #ffffff 0%, #e0f2fe 40%, #bfdbfe 100%);
     padding: 40px;
     border-radius: 12px;
+    margin-top: 40px;
     position: relative;
     overflow: hidden;
 }
@@ -2542,9 +2545,9 @@ img.mobile-screen-1 {
 
 /* Technologies Section */
 .technologies {
-    padding: 80px 0;
+    padding: 40px 0;
     /* Gradient similar to the provided image: light blue to darker blue */
-    /* background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%); */
+    /* background: linear-gradient(135deg, #bfdbfe 0%, #ffffff 100%); */
     background: #f8fafc;
     color: #2563eb;
     text-align: center;
@@ -2653,8 +2656,8 @@ img.mobile-screen-1 {
 
 /* Clients Section */
 .clients-section {
-    /* background: #e0f2fe; */
-    background: linear-gradient(135deg, #ffffff 0%, #bfdbfe 100%);
+    background: #F8FAFC;
+    /* background: linear-gradient(135deg, #ffffff 0%, #bfdbfe 100%); */
     padding: 40px 0;
     text-align: center;
 }
@@ -2915,8 +2918,9 @@ img.mobile-screen-1 {
 
 /* Development Process Section */
 .dev-process {
-    background: #f8fafc;
-    padding: 80px 0;
+    /* background: #f8fafc; */
+    background: linear-gradient(135deg, #bfdbfe 0%, #ffffff 100%);
+    padding: 40px 0;
 }
 
 .section-header-center {
@@ -3696,8 +3700,8 @@ img.mobile-screen-1 {
 
 /* Why Choose Us Section */
 .why-choose-us {
-    background: #F8FAFC;
-    /* background: linear-gradient(135deg, #e0f2fe 0%, #F8FAFC 100%); */
+    /* background: #F8FAFC; */
+    background: linear-gradient(135deg, #e0f2fe 0%, #F8FAFC 100%);
     padding: 20px 0 50px;
 }
 
@@ -4473,8 +4477,9 @@ img.mobile-screen-1 {
 
 /* CTA Section */
 .os-cta {
-    padding: 60px 0 100px;
-    background: linear-gradient(135deg, #e0f2fe 0%, #7BAAF5 100%);
+    padding: 40px 0 100px;
+    background: #f8fafc;
+    /* background: linear-gradient(135deg, #e0f2fe 0%, #7BAAF5 100%); */
 }
 
 .os-cta-card {
@@ -6284,6 +6289,7 @@ img.mobile-screen-1 {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
