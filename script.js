@@ -224,7 +224,8 @@ function initFAQ() {
     if (window.location.pathname.includes('portfolio.html') || window.location.pathname.includes('muda-konsultan.html')
         || window.location.pathname.includes('privacy-policy.html') || window.location.pathname.includes('blog.html')
         || window.location.pathname.includes('our-products.html') || window.location.pathname.includes('jasa-pembuatan-aplikasi-dan-sistem-custom.html')
-        || window.location.pathname.includes('digital-content.html') || window.location.pathname.includes('faq.html')) {
+        || window.location.pathname.includes('digital-content.html') || window.location.pathname.includes('faq.html')
+        || window.location.pathname.includes('company-verification.html') || window.location.pathname.includes('seo-specialist.html')) {
         return;
     }
 
