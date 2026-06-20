@@ -6423,6 +6423,10 @@ img.mobile-screen-1 {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .seo-dashboard-card {
@@ -6546,13 +6550,14 @@ img.mobile-screen-1 {
 
 /* SEO Services Section */
 .seo-services {
-    padding: 100px 0;
+    padding: 70px 0;
     background: white;
 }
 
 .seo-section-header {
     text-align: center;
     margin-bottom: 40px;
+    margin-top: -40px;
 }
 
 .seo-section-tag {
@@ -6710,14 +6715,15 @@ img.mobile-screen-1 {
 
 /* SEO Stats Section */
 .seo-stats-section {
-    padding: 100px 0;
+    padding: 70px 0;
+    margin-top: -40px;
     background: white;
 }
 
 .seo-stats-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 40px;
     align-items: center;
 }
 
@@ -6955,87 +6961,235 @@ img.mobile-screen-1 {
 }
 
 /* Responsive Styles for SEO Page */
+/* =========================
+   TABLET
+========================= */
 @media (max-width: 1024px) {
+
     .seo-hero-content,
     .seo-stats-content {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .seo-services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .seo-process-steps {
         flex-wrap: wrap;
+        gap: 20px;
     }
-    
+
     .seo-process-step {
-        flex: 0 0 calc(50% - 16px);
+        flex: 0 0 calc(50% - 10px);
     }
-    
+
     .step-line {
         display: none;
     }
 }
 
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 768px) {
+
     .seo-hero {
-        padding: 60px 0;
+        padding: 48px 0;
     }
-    
+
+    .seo-hero-content,
+    .seo-stats-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .seo-hero-text {
+        text-align: center;
+    }
+
+    .seo-tag {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+
     .seo-hero-title {
-        font-size: 28px;
+        font-size: 32px;
+        line-height: 1.3;
+        text-align: center;
+        word-break: break-word;
     }
-    
-    .seo-section-title,
-    .seo-stats-title,
-    .seo-cta-text h2 {
-        font-size: 24px;
+
+    .seo-hero-description {
+        font-size: 15px;
+        line-height: 1.7;
+        text-align: center;
     }
-    
-    .seo-services-grid {
-        grid-template-columns: 1fr;
+
+    .seo-hero-features {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
     }
-    
-    .seo-process-step {
-        flex: 0 0 100%;
+
+    .seo-feature {
+        width: 100%;
+        justify-content: center;
+        font-size: 14px;
     }
-    
-    .seo-stats-cards {
-        grid-template-columns: 1fr;
+
+    .seo-feature-icon {
+        width: 28px;
+        height: 28px;
     }
-    
-    .seo-google-badge {
-        position: relative;
-        right: auto;
-        bottom: auto;
-        margin-top: 24px;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .seo-dashboard-card {
-        max-width: 100%;
-    }
-    
+
     .seo-hero-buttons {
         flex-direction: column;
+        width: 100%;
+        gap: 12px;
     }
-    
+
     .btn-seo-primary,
     .btn-seo-secondary {
         width: 100%;
+        padding: 14px 20px;
+        text-align: center;
+        font-size: 15px;
+        border-radius: 12px;
+    }
+
+    /* HERO IMAGE MENJADI VERTIKAL */
+    .seo-hero-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+
+    .seo-dashboard-card {
+        width: 100%;
+        max-width: 340px;
+        padding: 20px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    /* GOOGLE BADGE PINDAH KE BAWAH */
+    .seo-google-badge {
+        position: static !important;
+        right: unset !important;
+        left: unset !important;
+        top: unset !important;
+        bottom: unset !important;
+        transform: none !important;
+
+        width: 100%;
+        max-width: 220px;
+
+        margin: 0 auto;
+        padding: 12px 16px;
+    }
+
+    .google-badge-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .seo-section-title,
+    .seo-stats-title,
+    .seo-cta-text h2 {
+        font-size: 28px;
+        line-height: 1.3;
         text-align: center;
     }
-    
-    .seo-tools-grid {
-        gap: 24px;
+
+    .seo-services-grid,
+    .seo-stats-cards {
+        grid-template-columns: 1fr;
     }
-    
+
+    .seo-process-step {
+        flex: 0 0 100%;
+    }
+
+    .seo-tools-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
     .tool-item {
-        font-size: 16px;
+        font-size: 14px;
+    }
+
+    /* MENCEGAH OVERFLOW iPHONE */
+    * {
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    img,
+    svg,
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    body,
+    html {
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+    }
+}
+
+/* =========================
+   iPHONE / SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+
+    .seo-hero {
+        padding: 36px 0;
+    }
+
+    .seo-hero-title {
+        font-size: 26px;
+    }
+
+    .seo-hero-description {
+        font-size: 14px;
+    }
+
+    .seo-section-title,
+    .seo-stats-title,
+    .seo-cta-text h2 {
+        font-size: 22px;
+    }
+
+    .seo-dashboard-card {
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .btn-seo-primary,
+    .btn-seo-secondary {
+        padding: 13px 18px;
+        font-size: 14px;
+    }
+
+    .seo-tag {
+        font-size: 11px;
+    }
+
+    .tool-item {
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -7565,8 +7719,47 @@ img.mobile-screen-1 {
         width: 280px;
     }
     
+    /* SEO REASONS GRID VERTICAL ON MOBILE */
     .seo-reasons-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .seo-reason {
+        align-items: center;
+    }
+    
+    .seo-reason-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+    
+    .seo-reason p {
+        font-size: 13px;
+    }
+
+    .seo-note-icon {
+        display: none;
+    }
+
+    /* SEO NOTE BOX RESPONSIVE */
+    .seo-note-box {
+        padding: 20px;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .seo-note-icon {
+        font-size: 40px;
+    }
+    
+    .seo-note-box h3 {
+        font-size: 18px;
+    }
+    
+    .seo-note-box p {
+        font-size: 14px;
     }
     
     .seo-investment-cta {
@@ -7575,5 +7768,10 @@ img.mobile-screen-1 {
     
     .seo-cta-center h3 {
         font-size: 20px;
+    }
+
+    .seo-timeline-header h3 {
+        font-size:18px;
+        white-space:normal;
     }
 }

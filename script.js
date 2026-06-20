@@ -225,7 +225,7 @@ function initFAQ() {
         || window.location.pathname.includes('privacy-policy.html') || window.location.pathname.includes('blog.html')
         || window.location.pathname.includes('our-products.html') || window.location.pathname.includes('jasa-pembuatan-aplikasi-dan-sistem-custom.html')
         || window.location.pathname.includes('digital-content.html') || window.location.pathname.includes('faq.html')
-        || window.location.pathname.includes('company-verification.html') || window.location.pathname.includes('seo-specialist.html')) {
+        || window.location.pathname.includes('company-verification.html') || window.location.pathname.includes('jasa-seo-profesional.html')) {
         return;
     }
 
