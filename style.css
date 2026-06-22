@@ -5808,13 +5808,20 @@ img.mobile-screen-1 {
 }
 
 .vd-card-desc {
-    font-size: 14px;
     color: #475569;
     line-height: 1.5;
     margin-bottom: 10px;
-    flex-grow: 1;
-    max-height: calc(1.5em * 5);
+    text-align: left;
+    font-size: 14px;
+
+    display: -webkit-box;
+
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+
+    -webkit-box-orient: vertical;
     overflow: hidden;
+
 }
 
 .vd-card-footer {
