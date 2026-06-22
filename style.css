@@ -1702,7 +1702,7 @@ img.service-icon {
 
 .portfolio-item-image {
     width: 100%;
-    height: 300px;
+    height: 270px;
     position: relative;
     overflow: hidden;
 }
@@ -1731,12 +1731,13 @@ img.service-icon {
 }
 
 .portfolio-dashboard-preview {
-    width: 100%;
-    height: 100%;
-    padding: 30px;
+    /* width: 100%; */
+    /* height: 100%; */
+    padding: 10px;
     display: flex;
+    object-fit: cover;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 /* Full display for web category portfolio items */
@@ -6223,6 +6224,13 @@ img.mobile-screen-1 {
 }
 
 @media(max-width:768px) {
+    .client-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
 
     .testimonial-card {
         width: 320px;
@@ -8243,7 +8251,7 @@ img.mobile-screen-1 {
     border-radius: 24px;
 
     box-shadow:
-        0 25px 60px rgba(15,23,42,.12);
+        0 25px 60px rgba(15, 23, 42, .12);
 }
 
 /* PHONE */
@@ -8263,7 +8271,7 @@ img.mobile-screen-1 {
     border-radius: 28px;
 
     box-shadow:
-        0 20px 40px rgba(0,0,0,.18);
+        0 20px 40px rgba(0, 0, 0, .18);
 }
 
 .phone-frame img {
@@ -8291,7 +8299,7 @@ img.mobile-screen-1 {
     border-radius: 18px 18px 0 0;
 
     box-shadow:
-        0 25px 50px rgba(0,0,0,.18);
+        0 25px 50px rgba(0, 0, 0, .18);
 }
 
 .laptop-frame img {
@@ -8312,14 +8320,13 @@ img.mobile-screen-1 {
     margin-left: -10%;
 
     background:
-        linear-gradient(
-            to bottom,
+        linear-gradient(to bottom,
             #d1d5db,
-            #94a3b8
-        );
+            #94a3b8);
 
     border-radius: 0 0 15px 15px;
 }
+
 /*-- batas showcase */
 
 .hero-btn-primary {
@@ -8380,8 +8387,8 @@ img.mobile-screen-1 {
     background: rgba(37, 99, 235, 0.1);
     border-radius: 12px;
     display: flex;
-    align-items: start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-stat-text {
@@ -8677,7 +8684,7 @@ img.mobile-screen-1 {
 
 /* RESPONSIVE NEW HERO */
 @media (max-width: 991px) {
-.hero-showcase {
+    .hero-showcase {
         position: relative;
         height: 430px;
     }
@@ -8759,7 +8766,11 @@ img.mobile-screen-1 {
 }
 
 @media (max-width: 768px) {
-     .hero-showcase {
+    .hero-new-stats {
+        display: none;
+    }
+
+    .hero-showcase {
         height: auto;
 
         display: flex;
@@ -8781,7 +8792,7 @@ img.mobile-screen-1 {
         right: auto;
     }
 
-     .phone-frame {
+    .phone-frame {
         width: 110px;
         order: 0;
     }
