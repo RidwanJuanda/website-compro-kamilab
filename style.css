@@ -1707,6 +1707,13 @@ img.service-icon {
     overflow: hidden;
 }
 
+
+.portfolio-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Full height for web category to show full image */
 .portfolio-item.portfolio-item-image {
     height: auto;
@@ -2049,6 +2056,10 @@ img.mobile-screen-1 {
 }
 
 @media (max-width: 768px) {
+    .portfolio-item-image {
+        height: 170px;
+    }
+
     .portfolio-hero {
         padding: 60px 0 40px !important;
     }
