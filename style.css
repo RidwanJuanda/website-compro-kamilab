@@ -5676,7 +5676,7 @@ img.mobile-screen-1 {
 }
 
 .vd-title {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 800;
     color: #0F172A;
     margin-bottom: 16px;
@@ -5807,7 +5807,7 @@ img.mobile-screen-1 {
 }
 
 .vd-card-title {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     color: #0F172A;
     line-height: 1.4;
@@ -6016,6 +6016,48 @@ img.mobile-screen-1 {
     /* Matches the background of logo-kamilab.jpeg if needed */
     padding: 2px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Show More Button Styles */
+.vd-show-more-container {
+    text-align: center;
+    padding: 20px 0 20px;
+}
+
+.vd-show-more-btn {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    transition: all 0.3s ease;
+}
+
+.vd-show-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+/* Hide extra cards initially */
+.vd-card {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.vd-card.hidden-card {
+    display: none;
+}
+
+/* Responsive adjustments for the button */
+@media (max-width: 640px) {
+    .vd-show-more-btn {
+        width: 100%;
+    }
 }
 
 /* FAQ Section */
