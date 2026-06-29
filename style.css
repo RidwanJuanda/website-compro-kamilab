@@ -6404,7 +6404,7 @@ img.mobile-screen-1 {
 }
 
 .seo-hero-title {
-    font-size: 48px;
+    font-size: 32px;
     font-weight: bold;
     color: #1e3a8a;
     line-height: 1.2;
@@ -6591,8 +6591,8 @@ img.mobile-screen-1 {
 
 .seo-google-badge {
     position: absolute;
-    right: -5px;
-    bottom: 60px;
+    right: -15px;
+    bottom: 130px;
     background: white;
     padding: 16px 24px;
     border-radius: 16px;
@@ -7173,12 +7173,12 @@ img.mobile-screen-1 {
 
     /* GOOGLE BADGE PINDAH KE BAWAH */
     .seo-google-badge {
-        position: static !important;
+        /* position: static !important;
         right: unset !important;
         left: unset !important;
-        top: unset !important;
-        bottom: unset !important;
-        transform: none !important;
+        top: unset !important; */
+        /* bottom: unset !important; */
+        /* transform: none !important; */
 
         width: 100%;
         max-width: 220px;
@@ -7251,7 +7251,7 @@ img.mobile-screen-1 {
     }
 
     .seo-hero-title {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .seo-hero-description {
