@@ -6591,7 +6591,7 @@ img.mobile-screen-1 {
 
 .seo-google-badge {
     position: absolute;
-    right: -30px;
+    right: -5px;
     bottom: 60px;
     background: white;
     padding: 16px 24px;
@@ -6617,7 +6617,7 @@ img.mobile-screen-1 {
 }
 
 .seo-google-badge span {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     color: #1e3a8a;
 }
@@ -6646,10 +6646,17 @@ img.mobile-screen-1 {
 }
 
 .seo-section-title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     color: #1e3a8a;
-    margin: 0 0 16px 0;
+    margin: 0 0 0 0;
+}
+
+.seo-section-img {
+    width: auto;
+    height: 100px;
+    object-fit: contain;
+    margin-top: 40px;
 }
 
 .seo-section-description {
@@ -6874,7 +6881,7 @@ img.mobile-screen-1 {
 
 /* SEO Tools Section */
 .seo-tools {
-    padding: 0px 0 40px 0;
+    padding-top: 40px;
     background: white;
 }
 
@@ -7071,6 +7078,14 @@ img.mobile-screen-1 {
    MOBILE
 ========================= */
 @media (max-width: 768px) {
+
+    .seo-section-img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        margin: 24px auto 0;
+        display: block;
+    }
 
     .seo-hero {
         padding: 48px 0;
@@ -7309,7 +7324,7 @@ img.mobile-screen-1 {
 }
 
 .seo-investment-title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     color: #0f172a;
     line-height: 1.2;
@@ -7785,7 +7800,7 @@ img.mobile-screen-1 {
 
 @media (max-width: 768px) {
     .seo-investment-title {
-        font-size: 32px;
+        font-size: 22px;
     }
 
     .seo-investment-illustration {
