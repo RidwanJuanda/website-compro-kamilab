@@ -6204,6 +6204,8 @@ img.mobile-screen-1 {
     background: #fff;
     border: 1px solid #E2E8F0;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
     padding: 32px;
     box-shadow: 0 10px 30px rgba(15, 23, 42, .05);
     transition: .3s;
@@ -6246,14 +6248,14 @@ img.mobile-screen-1 {
 .testimonial-text {
     color: #475569;
     line-height: 1.9;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     text-align: left;
     font-size: 14px;
-
+    flex: 1;
     display: -webkit-box;
 
-    line-clamp: 4;
-    -webkit-line-clamp: 4;
+    /* line-clamp: 5;
+    -webkit-line-clamp: 5; */
 
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -6263,6 +6265,7 @@ img.mobile-screen-1 {
     display: flex;
     align-items: center;
     gap: 16px;
+    margin-top: auto;
 }
 
 .client-detail h4 {
