@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Basic SEO -->
+    <title>Jasa IT Infrastructure & Jaringan | Kamilab</title>
+    <meta name="description"
+        content="Kamilab menyediakan layanan perencanaan, instalasi, dan pengelolaan infrastruktur IT, server, jaringan, virtualisasi, dan cloud untuk kestabilan operasional bisnis Anda.">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://itkamilab.com/it-infrastructure.html">
+
+    <!-- Open Graph (WhatsApp/FB/LinkedIn) -->
+    <meta property="og:site_name" content="Kamilab">
+    <meta property="og:title" content="Jasa IT Infrastructure & Jaringan | Kamilab">
+    <meta property="og:description"
+        content="Perencanaan, instalasi, dan pengelolaan infrastruktur IT, server, jaringan, virtualisasi, dan cloud dari tim profesional Kamilab.">
+    <meta property="og:url" content="https://itkamilab.com/it-infrastructure.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://itkamilab.com/assets/og-cover-new.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IT Infrastructure & Network Solutions | Kamilab">
+    <meta name="twitter:description"
+        content="Dapatkan solusi infrastruktur IT andal, stabil, aman, dan skalabel untuk kelancaran bisnis Anda bersama Kamilab.">
+    <meta name="twitter:image" content="https://itkamilab.com/assets/og-cover-new.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KY6PDKT8P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0KY6PDKT8P');
+    </script>
+</head>
+
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-container">
+            <div class="loading-logo-wrapper">
+                <img loading="lazy" src="images/ic-logo-text-dark-blue-transparent.png" alt="Kamilab Logo"
+                    class="loading-logo">
+            </div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo" style="text-decoration: none;">
+                    <img loading="lazy" src="images/ic-logo-dark-blue.png" alt="KAMILAB Icon" class="logo-icon-left">
+                    <img loading="lazy" src="images/ic-logo-text-dark-blue.png" alt="KAMILAB Logo" class="logo-icon">
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu"
+                    onclick="toggleMobileMenu(event)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav" id="mainNav">
+                    <a href="/" class="nav-link">Beranda</a>
+                    <div class="nav-item-dropdown">
+                        <a href="" class="nav-link dropdown-toggle active">Layanan Kami <span
+                                class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="our-products.html" class="dropdown-link">Produk Kami</a>
+                            <a href="jasa-seo-profesional.html" class="dropdown-link">SEO Specialist</a>
+                            <a href="digital-content.html" class="dropdown-link">Digital Content</a>
+                            <a href="it-infrastructure.html" class="dropdown-link active">IT Infrastructure</a>
+                            <a href="jasa-pembuatan-aplikasi-dan-sistem-custom.html" class="dropdown-link">System
+                                Development</a>
+                            <a href="muda-konsultan.html" class="dropdown-link">Konsultan Keuangan</a>
+                        </div>
+                    </div>
+                    <a href="portfolio.html" class="nav-link">Portofolio</a>
+                    <a href="faq.html" class="nav-link">FAQ</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="/#kontak" class="btn-contact-us">Kontak Kami</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs Section -->
+    <!-- <div class="breadcrumb-container">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="/">
+                        <svg class="home-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                        Beranda
+                    </a>
+                </li>
+                <li>Layanan</li>
+                <li>IT Infrastructure</li>
+            </ul>
+        </div>
+    </div> -->
+
+    <!-- Hero Section -->
+    <section class="it-hero">
+        <div class="container">
+            <div class="it-hero-wrapper">
+                <div class="it-hero-text">
+                    <span class="seo-tag">IT INFRASTRUCTURE</span>
+                    <h1 class="it-hero-title">Infrastruktur IT <span class="text-blue">Andal</span>,<br>Bisnis Berjalan
+                        <span class="text-blue">Optimal</span></h1>
+                    <p class="it-hero-description">Kami menyediakan layanan infrastruktur IT yang aman, skalabel, dan
+                        berkinerja tinggi untuk memastikan kelancaran operasional bisnis Anda.</p>
+
+                    <div class="it-hero-features">
+                        <div class="it-hero-feature">
+                            <span class="it-feature-icon-circle">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb"
+                                    stroke-width="2.5">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                </svg>
+                            </span>
+                            <span>Aman</span>
+                        </div>
+                        <div class="it-hero-feature">
+                            <span class="it-feature-icon-circle">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb"
+                                    stroke-width="2.5">
+                                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                                    <polyline points="17 6 23 6 23 12" />
+                                </svg>
+                            </span>
+                            <span>Skalabel</span>
+                        </div>
+                        <div class="it-hero-feature">
+                            <span class="it-feature-icon-circle">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb"
+                                    stroke-width="2.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                            </span>
+                            <span>Stabil</span>
+                        </div>
+                        <div class="it-hero-feature">
+                            <span class="it-feature-icon-circle">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb"
+                                    stroke-width="2.5">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                                </svg>
+                            </span>
+                            <span>Efisien</span>
+                        </div>
+                    </div>
+
+                    <div class="it-hero-buttons">
+                        <a href="https://wa.me/6285183050289?text=Halo%20Tim%20Kamilab,%20Saya%20ingin%20mendapatkan%20konsultasi%20IT%20Infrastructure"
+                            class="it-btn-primary" target="_blank">
+                            Konsultasi Gratis
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#layanan" class="it-btn-secondary">
+                            Lihat Layanan Lainnya
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="it-hero-image-wrapper">
+                    <img src="images/it-infra-hero.jpg" alt="IT Infrastructure Solutions Kamilab" class="it-hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section / Key Characteristics -->
+    <section class="it-about">
+        <div class="container">
+            <div class="it-about-wrapper">
+                <div class="it-about-left">
+                    <span class="it-section-tag">TENTANG IT INFRASTRUCTURE</span>
+                    <h2 class="it-section-title">Apa Itu <span class="text-blue">IT Infrastructure?</span></h2>
+                    <p class="it-section-text">IT Infrastructure adalah fondasi teknologi yang mendukung seluruh
+                        operasional sistem dan aplikasi bisnis Anda. Kami membantu merancang, membangun, mengelola, dan
+                        mengoptimalkan infrastruktur IT agar bisnis Anda berjalan lebih efisien, aman, dan siap untuk
+                        tumbuh.</p>
+                </div>
+                <div class="it-about-right">
+                    <div class="it-features-grid">
+                        <!-- Feature 1 -->
+                        <div class="it-feature-card">
+                            <div class="it-feature-icon-wrapper">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="it-feature-content">
+                                <h3 class="it-feature-title">Performa Optimal</h3>
+                                <p class="it-feature-desc">Sistem stabil dan cepat untuk produktivitas tanpa hambatan.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="it-feature-card">
+                            <div class="it-feature-icon-wrapper">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb"
+                                    stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+                            <div class="it-feature-content">
+                                <h3 class="it-feature-title">Keamanan Terjamin</h3>
+                                <p class="it-feature-desc">Perlindungan data dan sistem dari ancaman dengan standar
+                                    keamanan terbaik.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div class="it-feature-card">
+                            <div class="it-feature-icon-wrapper">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb"
+                                    stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="5" rx="1"></rect>
+                                    <rect x="2" y="10" width="20" height="5" rx="1"></rect>
+                                    <rect x="2" y="17" width="20" height="5" rx="1"></rect>
+                                    <line x1="6" y1="5.5" x2="6.01" y2="5.5"></line>
+                                    <line x1="6" y1="12.5" x2="6.01" y2="12.5"></line>
+                                    <line x1="6" y1="19.5" x2="6.01" y2="19.5"></line>
+                                </svg>
+                            </div>
+                            <div class="it-feature-content">
+                                <h3 class="it-feature-title">Skalabilitas Tinggi</h3>
+                                <p class="it-feature-desc">Infrastruktur yang mudah berkembang sesuai kebutuhan bisnis.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Feature 4 -->
+                        <div class="it-feature-card">
+                            <div class="it-feature-icon-wrapper">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                    </path>
+                                    <path d="M2 12h20"></path>
+                                </svg>
+                            </div>
+                            <div class="it-feature-content">
+                                <h3 class="it-feature-title">Ketersediaan Tinggi</h3>
+                                <p class="it-feature-desc">Sistem selalu siap diakses dengan uptime maksimal.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 5 -->
+                        <div class="it-feature-card">
+                            <div class="it-feature-icon-wrapper">
+                                <span class="it-rp-icon">Rp</span>
+                            </div>
+                            <div class="it-feature-content">
+                                <h3 class="it-feature-title">Efisiensi Biaya</h3>
+                                <p class="it-feature-desc">Solusi infrastruktur yang efisien dan memberikan ROI yang
+                                    optimal.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 6 -->
+                        <div class="it-feature-card">
+                            <div class="it-feature-icon-wrapper">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb"
+                                    stroke-width="2">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="it-feature-content">
+                                <h3 class="it-feature-title">Dukungan Profesional</h3>
+                                <p class="it-feature-desc">Tim ahli siap membantu dengan respons cepat dan solusi tepat.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="it-services" id="layanan">
+        <div class="container">
+            <div class="it-services-header">
+                <span class="it-section-tag-center">CAKUPAN LAYANAN</span>
+                <h2 class="it-section-title-center">Layanan <span class="text-blue">IT Infrastructure</span> Kami</h2>
+            </div>
+
+            <div class="it-services-grid">
+                <!-- Card 1 -->
+                <div class="it-service-card">
+                    <div class="it-service-icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="5" rx="1"></rect>
+                            <rect x="2" y="10" width="20" height="5" rx="1"></rect>
+                            <rect x="2" y="17" width="20" height="5" rx="1"></rect>
+                            <line x1="6" y1="5.5" x2="6.01" y2="5.5" stroke-width="3"></line>
+                            <line x1="6" y1="12.5" x2="6.01" y2="12.5" stroke-width="3"></line>
+                            <line x1="6" y1="19.5" x2="6.01" y2="19.5" stroke-width="3"></line>
+                            <line x1="9" y1="5.5" x2="9.01" y2="5.5" stroke-width="3"></line>
+                            <line x1="9" y1="12.5" x2="9.01" y2="12.5" stroke-width="3"></line>
+                            <line x1="9" y1="19.5" x2="9.01" y2="19.5" stroke-width="3"></line>
+                        </svg>
+                    </div>
+                    <h3 class="it-service-title">Server & Storage</h3>
+                    <p class="it-service-desc">Pengadaan, konfigurasi, dan manajemen server serta penyimpanan data yang
+                        andal dan aman.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="it-service-card">
+                    <div class="it-service-icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="it-service-title">Network Solution</h3>
+                    <p class="it-service-desc">Desain, implementasi, dan optimasi jaringan untuk konektivitas yang
+                        stabil dan cepat.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="it-service-card">
+                    <div class="it-service-icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="it-service-title">Virtualization</h3>
+                    <p class="it-service-desc">Solusi virtualisasi untuk meningkatkan efisiensi sumber daya dan
+                        fleksibilitas sistem.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="it-service-card">
+                    <div class="it-service-icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="it-service-title">Cloud Infrastructure</h3>
+                    <p class="it-service-desc">Migrasi, implementasi, dan manajemen cloud publik, privat, atau hybrid
+                        sesuai kebutuhan bisnis.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="it-service-card">
+                    <div class="it-service-icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="it-service-title">Security & Firewall</h3>
+                    <p class="it-service-desc">Proteksi infrastruktur dari ancaman siber dengan firewall, IDS/IPS, dan
+                        security best practice.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="it-service-card">
+                    <div class="it-service-icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="it-service-title">Monitoring & Backup</h3>
+                    <p class="it-service-desc">Monitoring 24/7 dan backup terjadwal untuk memastikan ketersediaan dan
+                        keamanan data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology & Partner Section -->
+    <section class="it-partners">
+        <div class="container">
+            <div class="it-partners-wrapper">
+                <div class="it-partners-left">
+                    <span class="it-section-tag">TEKNOLOGI & PARTNER</span>
+                    <h2 class="it-section-title">Teknologi Modern,<br><span class="text-blue">Hasil Maksimal</span></h2>
+                    <p class="it-section-desc font-sm">Kami menggunakan teknologi terbaik dan bekerja sama dengan
+                        partner global untuk memberikan solusi infrastruktur yang andal dan terkini.</p>
+                </div>
+
+                <div class="it-partners-right">
+                    <div class="it-partners-grid">
+                        <!-- Google Cloud Logo -->
+                        <div class="partner-logo-box">
+                            <div class="partner-brand-flex">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="brand-sub-icon">
+                                    <path d="M12 2L3.5 7l8.5 5 8.5-5L12 2z" fill="#EA4335" />
+                                    <path d="M3.5 7v10L12 12 3.5 7z" fill="#4285F4" />
+                                    <path d="M20.5 7v10L12 12l8.5-5z" fill="#FBBC05" />
+                                    <path d="M12 12l8.5 5L12 22l-8.5-5 8.5-5z" fill="#34A853" />
+                                </svg>
+                                <span class="brand-text">Google Cloud</span>
+                            </div>
+                        </div>
+                        <!-- Microsoft Azure Logo -->
+                        <div class="partner-logo-box">
+                            <div class="partner-brand-flex">
+                                <svg width="20" height="20" viewBox="0 0 23 23" fill="none" class="brand-sub-icon">
+                                    <path d="M0 0h11v11H0z" fill="#f25022" />
+                                    <path d="M12 0h11v11H12z" fill="#7fba00" />
+                                    <path d="M0 12h11v11H0z" fill="#00a4ef" />
+                                    <path d="M12 12h11v11H12z" fill="#ffb900" />
+                                </svg>
+                                <span class="brand-text">Azure</span>
+                            </div>
+                        </div>
+                        <!-- AWS Logo -->
+                        <div class="partner-logo-box">
+                            <div class="partner-brand-flex">
+                                <span class="brand-text font-italic">aws</span>
+                            </div>
+                        </div>
+                        <!-- Dell Technologies Logo -->
+                        <div class="partner-logo-box">
+                            <div class="partner-brand-flex">
+                                <span class="brand-text font-bold">DELL</span>
+                            </div>
+                        </div>
+                        <!-- HPE Logo -->
+                        <div class="partner-logo-box">
+                            <div class="partner-brand-flex">
+                                <div style="width: 24px; height: 12px; border: 3px solid #00b388; margin-right: 8px;">
+                                </div>
+                                <span class="brand-text text-sm">HPE</span>
+                            </div>
+                        </div>
+                        <!-- Fortinet Logo -->
+                        <div class="partner-logo-box">
+                            <div class="partner-brand-flex">
+                                <span class="brand-text text-red">FORTINET</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Process Section -->
+    <section class="it-process">
+        <div class="container">
+            <div class="it-process-header">
+                <span class="it-section-tag-center">PROSES KERJA</span>
+                <h2 class="it-section-title-center">Proses <span class="text-blue">Kerja</span> Kami</h2>
+            </div>
+
+            <div class="it-process-wrapper">
+                <!-- Step 1 -->
+                <div class="it-process-step">
+                    <div class="it-process-number">1</div>
+                    <div class="it-process-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="it-process-title">Konsultasi</h3>
+                    <p class="it-process-desc">Kami memahami kebutuhan bisnis dan infrastruktur Anda.</p>
+                </div>
+
+                <div class="it-process-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2"
+                        stroke-linecap="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="it-process-step">
+                    <div class="it-process-number">2</div>
+                    <div class="it-process-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg>
+                    </div>
+                    <h3 class="it-process-title">Perancangan</h3>
+                    <p class="it-process-desc">Membuat desain arsitektur infrastruktur yang tepat dan efisien.</p>
+                </div>
+
+                <div class="it-process-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2"
+                        stroke-linecap="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="it-process-step">
+                    <div class="it-process-number">3</div>
+                    <div class="it-process-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="it-process-title">Implementasi</h3>
+                    <p class="it-process-desc">Implementasi infrastruktur dilakukan oleh tim ahli berpengalaman.</p>
+                </div>
+
+                <div class="it-process-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2"
+                        stroke-linecap="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="it-process-step">
+                    <div class="it-process-number">4</div>
+                    <div class="it-process-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="it-process-title">Monitoring</h3>
+                    <p class="it-process-desc">Monitoring berkelanjutan untuk memastikan performa dan keamanan optimal.
+                    </p>
+                </div>
+
+                <div class="it-process-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2"
+                        stroke-linecap="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="it-process-step">
+                    <div class="it-process-number">5</div>
+                    <div class="it-process-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="it-process-title">Support & Improvement</h3>
+                    <p class="it-process-desc">Dukungan teknis dan optimasi berkelanjutan sesuai perkembangan bisnis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA Banner Section -->
+    <section class="it-cta-banner-section">
+        <div class="container">
+            <div class="it-cta-banner">
+                <div class="it-cta-banner-left">
+                    <div class="it-cta-icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="it-cta-text-wrapper">
+                        <h2 class="it-cta-title">Siap Membangun Infrastruktur IT yang <span
+                                class="text-white-bold">Andal</span> dan Siap <span
+                                class="text-white-bold">Bertumbuh?</span></h2>
+                        <p class="it-cta-desc">Konsultasikan kebutuhan infrastruktur IT Anda bersama tim ahli kami
+                            sekarang juga.</p>
+                    </div>
+                </div>
+                <div class="it-cta-banner-right">
+                    <a href="https://wa.me/6285183050289?text=Halo%20Tim%20Kamilab,%20Saya%20ingin%20konsultasi%20mengenai%20IT%20Infrastructure"
+                        class="it-cta-btn" target="_blank">
+                        Konsultasi Gratis
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="kontak" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Inner block can be loaded here, but hardcoding it to match subpages -->
+            </div>
+            <div class="footer-contact">
+                <h3 class="contact-main-title">Hubungi Kami</h3>
+                <div class="contact-title-line"></div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg class="contact-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                stroke="#2563eb" stroke-width="2" fill="none" />
+                            <polyline points="22,6 12,13 2,6" stroke="#2563eb" stroke-width="2" fill="none" />
+                        </svg>
+                        <a href="mailto:info@itkamilab.com?subject=Halo%20Tim%20Kamilab"
+                            class="contact-email-link">Email: info@itkamilab.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                stroke="#2563eb" stroke-width="2" fill="none" />
+                        </svg>
+                        <a href="https://wa.me/6285183050289" target="_blank" rel="noopener noreferrer"
+                            class="contact-phone-link">Phone/WhatsApp: +6285183050289</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#2563eb" stroke-width="2"
+                                fill="none" />
+                            <circle cx="12" cy="10" r="3" stroke="#2563eb" stroke-width="2" fill="none" />
+                        </svg>
+                        <span>Address: MTH Square, Jl. Letjen M.T. Haryono No.Kav 10 GF A4/A Jakarta Timur</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="9" stroke="#2563eb" stroke-width="2" />
+                            <path d="M12 7V12L15 15" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Waktu Kerja: Senin–Jumat, 09:00–18:00 WIB <br>
+                            <i>Hubungi kami kapan saja — kami akan balas segera.</i></span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="#2563eb" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Waktu Respons: dalam 1–3 jam (waktu kerja)</span>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <input type="text" id="contactName" name="name" placeholder="Nama" class="form-input" required>
+                    <input type="email" id="contactEmail" name="email" placeholder="Email" class="form-input" required>
+                    <textarea id="contactMessage" name="message" placeholder="Pesan" class="form-textarea" rows="4"
+                        required></textarea>
+                    <button type="submit" class="btn-submit">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <img loading="lazy" src="images/ic-logo-transparan.png" alt="KAMILAB" />
+                    <img loading="lazy" src="images/ic-logo-text-dark-blue-transparent.png" alt="KAMILAB Logo" />
+                </div>
+                <div class="footer-text">
+                    <p class="tagline">Inovasi Tanpa Batas, Solusi Tuntas.</p>
+                    <p class="copyright">© 2024 KAMILAB. All rights reserved.</p>
+                    <a href="privacy-policy.html">Kebijakan Privasi</a>
+                </div>
+                <div class="footer-cta">
+                    <a href="https://wa.me/6285183050289?text=Halo%20Tim%20Kamilab,%20Saya%20tertarik%20dengan%20layanan%20IT%20Infrastructure."
+                        target="_blank" aria-label="Chat on WhatsApp" class="btn-talk">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Action Button -->
+    <a href="https://wa.me/6285183050289?text=Halo%20Tim%20Kamilab,%20Saya%20tertarik%20dengan%20layanan%20IT%20Infrastructure."
+        class="whatsapp-fab" target="_blank" aria-label="Chat on WhatsApp">
+        <div class="fab-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg>
+        </div>
+        <span class="fab-text">Konsultasi Gratis</span>
+    </a>
+
+    <script>
+        // Global function as fallback for mobile menu toggle
+        window.toggleMobileMenu = function (e) {
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mainNav = document.getElementById('mainNav');
+            if (mobileMenuToggle && mainNav) {
+                mobileMenuToggle.classList.toggle('active');
+                mainNav.classList.toggle('active');
+                document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+            }
+        };
+    </script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
