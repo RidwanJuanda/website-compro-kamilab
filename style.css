@@ -9516,7 +9516,7 @@ img.mobile-screen-1 {
 }
 
 .it-services-header .it-section-title-center {
-    font-size: 44px;
+    font-size: 32px;
     font-weight: 800;
     color: #0f172a;
     line-height: 1.2;
@@ -9607,7 +9607,8 @@ img.mobile-screen-1 {
     content: "";
     position: absolute;
     bottom: 32px;
-    left: 116px; /* 32px padding + 64px icon + 20px gap */
+    left: 116px;
+    /* 32px padding + 64px icon + 20px gap */
     width: 36px;
     height: 3px;
     background-color: #2563eb;
@@ -9781,7 +9782,7 @@ img.mobile-screen-1 {
 }
 
 .brand-text {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 800;
     color: #64748b;
     font-family: system-ui, -apple-system, sans-serif;
@@ -10140,7 +10141,8 @@ img.mobile-screen-1 {
     }
 
     .it-service-flex-card::after {
-        left: 108px; /* 24px padding + 64px icon + 20px gap = 108px */
+        left: 108px;
+        /* 24px padding + 64px icon + 20px gap = 108px */
         bottom: 24px;
     }
 
@@ -10165,5 +10167,305 @@ img.mobile-screen-1 {
 
     .it-cta-desc {
         font-size: 14px;
+    }
+}
+
+/* ==========================================================================
+   Custom IT Infrastructure About Section Redesign
+   ========================================================================== */
+
+.it-about-header-redesign {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.it-about-header-image {
+    flex: 0 0 220px;
+    max-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.it-about-header-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.it-about-header-text {
+    flex: 1;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+
+.it-about-redesign-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.it-about-redesign-title .text-blue {
+    color: #2563eb;
+}
+
+.it-about-redesign-subtitle {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Metrics Section Styles */
+.it-metrics-section {
+    margin-top: 60px;
+}
+
+.it-metrics-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.it-metrics-divider::before,
+.it-metrics-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e2e8f0;
+}
+
+.it-metrics-divider-text {
+    padding: 0 24px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #2563eb;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.it-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.it-metric-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+
+.it-metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px -5px rgba(37, 99, 235, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-color: #bfdbfe;
+}
+
+.it-metric-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    border: 1px solid #dbeafe;
+    color: #2563eb;
+}
+
+.it-metric-icon-wrapper svg {
+    width: 24px;
+    height: 24px;
+    color: #2563eb;
+}
+
+.it-metric-value {
+    font-size: 28px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.it-metric-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 16px;
+}
+
+.it-metric-desc {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Why Choose Kamilab Panel */
+.it-why-choose-panel {
+    background: #f0f7ff;
+    border: 1px solid #e0f2fe;
+    border-radius: 20px;
+    padding: 30px 40px;
+    margin-top: 60px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.it-why-choose-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 0 0 260px;
+    max-width: 260px;
+}
+
+.it-why-choose-logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.it-why-choose-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.it-why-choose-title .text-blue {
+    color: #2563eb;
+}
+
+.it-why-choose-right {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    flex-grow: 1;
+}
+
+.it-why-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.it-why-item-icon {
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+}
+
+.it-why-item-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.it-why-item-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.it-why-item-desc {
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1200px) {
+    .it-about-header-image {
+        flex: 0 0 160px;
+        max-width: 160px;
+    }
+
+    .it-about-redesign-title {
+        font-size: 32px;
+    }
+
+    .it-metrics-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .it-why-choose-panel {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .it-why-choose-left {
+        max-width: 100%;
+        flex: 1 1 auto;
+    }
+
+    .it-why-choose-right {
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .it-about-header-image {
+        display: none;
+    }
+
+    .it-about-header-text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .it-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .it-why-choose-right {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .it-about-redesign-title {
+        font-size: 26px;
+    }
+
+    .it-metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .it-why-choose-right {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .it-why-choose-panel {
+        padding: 24px 20px;
     }
 }
