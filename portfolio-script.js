@@ -260,6 +260,10 @@
         nextBtn.onclick = nextSlide;
 
         updateSliderPosition();
+        const modalContent = modal.querySelector('.portfolio-modal-content');
+        if (modalContent) {
+            modalContent.scrollTop = 0;
+        }
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
