@@ -130,7 +130,22 @@
     function openModal(imageSrc, description) {
         modalImage.src = imageSrc;
         modalImage.classList.remove('zoomed'); // Reset zoom state
-        modalDescription.textContent = description || '';
+        modal.scrollTop = 0;
+        const modalContainer = modal.querySelector('.modal-image-container');
+        if (modalContainer) {
+            modalContainer.scrollTop = 0;
+            modalContainer.scrollLeft = 0;
+        }
+
+        const modalDescContainer = modal.querySelector('.modal-description');
+        if (description && description.trim() !== '') {
+            modalDescription.textContent = description;
+            if (modalDescContainer) modalDescContainer.style.display = 'block';
+        } else {
+            modalDescription.textContent = '';
+            if (modalDescContainer) modalDescContainer.style.display = 'none';
+        }
+
         modal.classList.add('active');
         document.body.style.overflow = 'hidden'; // Prevent background scrolling
     }
