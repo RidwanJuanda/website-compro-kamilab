@@ -650,7 +650,12 @@ img.service-icon {
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 24px;
+}
+
+.portfolio-card {
+    min-width: 0;
+    width: 100%;
 }
 
 .portfolio-card {
